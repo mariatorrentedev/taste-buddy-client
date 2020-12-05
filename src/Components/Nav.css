@@ -1,0 +1,58 @@
+header {
+  background-color: rgb(68, 0, 0);
+  margin-bottom: 20px;
+}
+
+header h1 {
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding-top: 30px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li,
+button {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  justify-content: space-around;
+}
+button {
+  color: black;
+  border-radius: 20px;
+}
+header nav ul li:last-child {
+  margin-right: 0;
+}
+
+/* Navbar Desktop view */
+@media all and (min-width: 600px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+  }
+  header h1 {
+    margin: 14px 0;
+    padding-top: 0;
+  }
+  header nav {
+    margin-top: 15px;
+  }
+
+  header nav ul li a:hover {
+    color: white;
+  }
+}
