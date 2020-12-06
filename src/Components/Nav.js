@@ -7,19 +7,19 @@ export default class Nav extends React.Component {
     return (
       <header>
         <section className="logo">
-          <Link to="/">
+          <Link to="/home">
             <h1>TasteBuddy</h1>
           </Link>
         </section>
         <nav className="nav">
           <ul className="menu">
-            <Link to="/login">
+            <Link to="/logout">
               <button className="login" aria-label="login-button" type="submit">
-                Login
+                Logout
               </button>
             </Link>
-            <Link to="/new-tasting">
-              <li>+New Tasting</li>
+            <Link to="/tastings/add">
+              <li>+Tasting</li>
             </Link>
             <Link to="/tastings">
               <li>Wines</li>
