@@ -2,9 +2,14 @@ header {
   background-color: rgb(68, 0, 0);
   margin-bottom: 20px;
 }
+img {
+  width: 30px;
+}
 
-header h1 {
+header h1 a {
   color: white;
+  text-shadow: -1px 0 #723333, 0 3px#723333, 2px 0#723333, 0 -1px#723333;
+  text-decoration: none;
   font-size: 30px;
   text-align: center;
   margin: 0;
@@ -21,14 +26,15 @@ header nav ul {
   padding-left: 0;
   list-style: none;
 }
-
-header nav ul li,
+section h1,
+header nav ul li a,
 button {
   color: white;
   text-decoration: none;
   padding: 10px;
   justify-content: space-around;
 }
+
 button {
   color: black;
   border-radius: 20px;
