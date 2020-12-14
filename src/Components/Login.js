@@ -48,7 +48,7 @@ export default class Login extends React.Component {
         <form
           className="form"
           aria-label="login-form"
-          onSubmit={this.handleLogin}
+          onSubmit={(e) => this.handleLogin}
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset aria-label="email">

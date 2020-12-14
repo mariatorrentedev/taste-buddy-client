@@ -70,16 +70,6 @@ class AddTasting extends Component {
           onSubmit={(e) => this.handleSubmit(e)}
         >
           {error && <p className="error">{error}</p>}
-          <div className="wine-image">
-            <label htmlFor="wine-url">Image Url:</label>
-            <input
-              placeholder="https://www.notion.so/imgjioewfjwe"
-              type="url"
-              id="wine-url"
-              name="wineUrl"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
           <div className="wine-name">
             <label htmlFor="wine-name" aria-label="wine-name">
               Name:
@@ -127,6 +117,20 @@ class AddTasting extends Component {
               name="vintage"
               onChange={(e) => this.handleChange(e)}
             />
+          </div>
+          <div className="score">
+            <label htmlFor="score" aria-label="score">
+              Score:
+            </label>
+            <select name="score" onChange={(e) => this.handleChange(e)}>
+              <option value="">Select...</option>
+              <option value="50-74">50-74</option>
+              <option value="75-79">75-79</option>
+              <option value="80-84">80-84</option>
+              <option value="85-89">85-89</option>
+              <option value="90-94">90-94</option>
+              <option value="95-100">95-100</option>
+            </select>
           </div>
           <div className="hiding-form">
             {/*

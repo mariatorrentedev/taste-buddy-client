@@ -20,6 +20,7 @@ const tastings = [
     producer: "The Etcharts",
     varietal: "Malbec",
     vintage: "2007",
+    score: "85-89",
   },
   {
     id: 1,
@@ -28,6 +29,7 @@ const tastings = [
     producer: "Federico Carletti",
     varietal: "Sangiovese",
     vintage: "2017",
+    score: "95-100",
   },
   {
     id: 2,
@@ -36,6 +38,7 @@ const tastings = [
     producer: "Jean-Paul Daumen",
     varietal: "Grenache, Syrah, Counoise, Cinsault, Mourvedre",
     vintage: "2016",
+    score: "90-94",
   },
 ];
 
@@ -47,6 +50,13 @@ class App extends Component {
       this.setState({
         tastings,
         error: null,
+      });
+    },
+    deleteTasting: (tastingId) => {
+      return this.setState({
+        tastings: this.state.tastings.filter(
+          (tasting) => tasting.id !== tastingId
+        ),
       });
     },
     addTasting: (newTasting) => {

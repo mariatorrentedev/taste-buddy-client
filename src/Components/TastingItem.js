@@ -1,48 +1,46 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Context from "../Context";
+import DeleteButton from "./DeleteButton";
 
 export default class TastingItem extends React.Component {
+  static contextType = Context;
   state = {
     opened: false,
   };
-
   static defaultProps = {
     wineName: "",
-    wineUrl: "",
     producer: "",
     varietal: "",
-    vintage: "vintage",
+    vintage: "",
+    score: "",
   };
   render() {
-    const { wineName, wineUrl, producer, varietal } = this.props;
+    const { wineName, producer, varietal, score } = this.props;
+
     return (
       <li className="tasting-item">
         <div
           className="tasting-item-content"
           onClick={() => this.setState({ opened: !this.state.opened })}
         >
-          <h3 className="tasting-item-wineName">{wineName}</h3>
+          <h2 className="tasting-item-wineName">{wineName}</h2>
           {this.state.opened && (
-            <p>
-              {wineUrl}, {varietal}, {producer}
-            </p>
+            <section className="tasting-item-expanded">
+              <li>{varietal}</li>
+              <li>{producer}</li>
+              <li>{score}</li>
+            </section>
           )}
         </div>
         <div className="tasting-item-buttons">
           <button className="edit-tasting">Edit</button>
-          <button
-            className="delete-tasting"
-            //onClick={() => onClickDelete(id)}
-          >
-            Delete
-          </button>
+          <DeleteButton
+            tasting={{ ...this.props }}
+            history={{ ...this.props.history }}
+          />
         </div>
       </li>
     );
   }
 }
-
-TastingItem.defaultProps = {
-  onClickDelete: () => {},
-};
