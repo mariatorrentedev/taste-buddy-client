@@ -34,11 +34,10 @@ export default class TastingItem extends React.Component {
           )}
         </div>
         <div className="tasting-item-buttons">
-          <button className="edit-tasting">Edit</button>
-          <DeleteButton
-            tasting={{ ...this.props }}
-            history={{ ...this.props.history }}
-          />
+          <Link to={`/edittasting/${this.props.id}`}>
+            <button className="edit-tasting">Edit</button>
+          </Link>
+          <DeleteButton id={this.props.id} history={this.props.history} />
         </div>
       </li>
     );

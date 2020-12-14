@@ -11,6 +11,7 @@ import Dashboard from "./Components/Dashboard";
 import TastingList from "./Components/TastingList";
 
 import Context from "./Context";
+import EditTasting from "./Components/EditTasting";
 
 const tastings = [
   {
@@ -52,16 +53,24 @@ class App extends Component {
         error: null,
       });
     },
-    deleteTasting: (tastingId) => {
+    deleteTasting: (id) => {
       return this.setState({
-        tastings: this.state.tastings.filter(
-          (tasting) => tasting.id !== tastingId
-        ),
+        tastings: this.state.tastings.filter((tasting) => tasting.id !== id),
       });
     },
     addTasting: (newTasting) => {
       this.setState({
         tastings: [...this.state.tastings, newTasting],
+      });
+    },
+    updateTasting: (newTasting, id) => {
+      this.setState({
+        tastings: this.state.tastings.map((t) => {
+          if (t.id === id) {
+            return newTasting;
+          }
+          return t;
+        }),
       });
     },
     getTastings: () => {
@@ -97,6 +106,7 @@ class App extends Component {
           <Route path="/signup" component={Signup} />
           <div className="main">
             <Route path="/tastings/add" component={AddTasting} />
+            <Route path="/edittasting/:id" component={EditTasting} />
             <Route path="/home" component={Home} />
             <Route path="/dashboard" component={Dashboard} />
             <Route exact path="/tastings" component={TastingList} />

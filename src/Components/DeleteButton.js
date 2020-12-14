@@ -1,14 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import config from "../config";
 import Context from "../Context";
 
-export default class DeleteButton extends React.Component {
+export default class DeleteButton extends Component {
   static contextType = Context;
 
   handleDelete = (e) => {
     e.preventDefault();
-    const id = this.props.tasting.id;
-    fetch(`${config.API_BASE_URL}/${id}`, {
+    const id = this.props.id;
+    /*fetch(`${config.API_BASE_URL}/tastings/${id}`, {
       method: "DELETE",
       headers: {
         "content-type": "application/json",
@@ -21,12 +21,13 @@ export default class DeleteButton extends React.Component {
         }
       })
       .then((res) => {
-        this.props.deleteTasting(id);
-        this.props.history.push("/tastings");
-      })
+        */
+    this.context.deleteTasting(id);
+    this.props.history.push("/tastings");
+    /*})
       .catch((error) => {
         console.log(error);
-      });
+      });*/
   };
   render() {
     return (

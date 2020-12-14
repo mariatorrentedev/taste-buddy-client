@@ -20,7 +20,7 @@ export default class Nav extends React.Component {
                 aria-label="login-button"
                 type="submit"
               >
-                <img src="./images/login.png" alt="login-icon" />
+                <img src="/images/login.png" alt="login-icon" />
               </Link>
             </li>
             <li>
@@ -30,13 +30,13 @@ export default class Nav extends React.Component {
                 aria-label="singup-button"
                 type="submit"
               >
-                <img src="./images/singup.png" alt="singup-icon" />
+                <img src="/images/singup.png" alt="singup-icon" />
               </Link>
             </li>
             <li>
               {/*All this routes are going to be PRIVATE ROUTES*/}
               <Link className="logout" aria-label="logout-button" to="/">
-                <img src="./images/logout.png" alt="logout-icon" />
+                <img src="/images/logout.png" alt="logout-icon" />
               </Link>
             </li>
             <li>

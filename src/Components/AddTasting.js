@@ -132,8 +132,6 @@ class AddTasting extends Component {
               <option value="95-100">95-100</option>
             </select>
           </div>
-          <div className="hiding-form">
-            {/*
           <div className="country">
             <label htmlFor="country" aria-label="country">
               Country:
@@ -372,10 +370,7 @@ class AddTasting extends Component {
                 </select>
               </div>
             </div>
-            
-          </fieldset> 
-          Hiding rest of the form -functionality..then edit*/}
-          </div>
+          </fieldset>
           <button type="button" onClick={this.handleClickCancel}>
             Cancel
           </button>
@@ -385,4 +380,5 @@ class AddTasting extends Component {
     );
   }
 }
+
 export default AddTasting;
