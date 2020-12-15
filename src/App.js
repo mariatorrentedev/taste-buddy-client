@@ -9,7 +9,6 @@ import AddTasting from "./Components/AddTasting";
 import Home from "./Components/Home";
 import Dashboard from "./Components/Dashboard";
 import TastingList from "./Components/TastingList";
-
 import Context from "./Context";
 import EditTasting from "./Components/EditTasting";
 
@@ -17,7 +16,6 @@ const tastings = [
   {
     id: 0,
     wineName: "Yacochuya",
-    wineUrl: "http://www.google.com",
     producer: "The Etcharts",
     varietal: "Malbec",
     vintage: "2007",
@@ -54,7 +52,6 @@ const tastings = [
   {
     id: 1,
     wineName: "Poliziano",
-    wineUrl: "http://www.google.com",
     producer: "Federico Carletti",
     varietal: "Sangiovese",
     vintage: "2017",

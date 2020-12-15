@@ -1,10 +1,11 @@
 import React from "react";
+import AuthAPIService from "../services/auth-api-service";
+import { API_BASE_URL } from "../config";
 import { Link } from "react-router-dom";
 export default class Login extends React.Component {
   state = {
     error: null,
   };
-  /*
   handleLogin = (e) => {
     e.preventDefault();
     const { email, password } = e.target;
@@ -40,7 +41,7 @@ export default class Login extends React.Component {
         this.setState({ error: res.error });
       });
   };
-  */
+
   render() {
     return (
       <section>
