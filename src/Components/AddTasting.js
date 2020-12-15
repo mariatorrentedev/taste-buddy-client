@@ -7,7 +7,6 @@ class AddTasting extends Component {
   static contextType = Context;
   state = {
     error: null,
-    checked: true,
     newTasting: {},
   };
 
@@ -118,20 +117,6 @@ class AddTasting extends Component {
               onChange={(e) => this.handleChange(e)}
             />
           </div>
-          <div className="score">
-            <label htmlFor="score" aria-label="score">
-              Score:
-            </label>
-            <select name="score" onChange={(e) => this.handleChange(e)}>
-              <option value="">Select...</option>
-              <option value="50-74">50-74</option>
-              <option value="75-79">75-79</option>
-              <option value="80-84">80-84</option>
-              <option value="85-89">85-89</option>
-              <option value="90-94">90-94</option>
-              <option value="95-100">95-100</option>
-            </select>
-          </div>
           <div className="country">
             <label htmlFor="country" aria-label="country">
               Country:
@@ -226,7 +211,7 @@ class AddTasting extends Component {
               <h3>Rim Variation</h3>
               <input
                 id="yes-rim"
-                value="rim"
+                value="yes"
                 name="rim"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -234,7 +219,7 @@ class AddTasting extends Component {
               Yes
               <input
                 id="no-rim"
-                value="rim"
+                value="no"
                 name="rim"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -258,16 +243,16 @@ class AddTasting extends Component {
               </label>
               <select name="tearing" onChange={(e) => this.handleChange(e)}>
                 <option value="">Select...</option>
-                <option value="LigthT">Ligth </option>
-                <option value="MediumT">Medium</option>
-                <option value="HeavyT">Heavy</option>
+                <option value="Ligth">Ligth </option>
+                <option value="Medium">Medium</option>
+                <option value="Heavy">Heavy</option>
               </select>
             </div>
             <div className="radio-buttons">
               <h3>Gas Evidence</h3>
               <input
                 id="yes-gas"
-                value="gas"
+                value="yes"
                 name="gas"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -275,7 +260,7 @@ class AddTasting extends Component {
               Yes
               <input
                 id="no-gas"
-                value="gas"
+                value="no"
                 name="gas"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -315,11 +300,11 @@ class AddTasting extends Component {
               </select>
             </div>
             <div className="ageAssessment">
-              <label htmlFor="ageAssesment" aria-label="ageAssesment">
+              <label htmlFor="ageAssessment" aria-label="ageAssessment">
                 Age Assessment:
               </label>
               <select
-                name="ageAssesment"
+                name="ageAssessment"
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
@@ -330,12 +315,12 @@ class AddTasting extends Component {
             </div>
             <div className="fruitN">
               <h3>Fruit Notes</h3>
-              <div className="fruitNWhite">
-                <label htmlFor="fruitNWhite" aria-label="fruitNWhite">
+              <div className="fruitWhite">
+                <label htmlFor="fruitWhite" aria-label="fruitWhite">
                   White Wines:
                 </label>
                 <select
-                  name="fruitNWhite"
+                  name="fruitWhite"
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
@@ -345,11 +330,11 @@ class AddTasting extends Component {
                   <option value="gold">Gold</option>
                 </select>
               </div>
-              <div className="colorRed">
-                <label htmlFor="colorRed" aria-label="colorRed">
+              <div className="fruitRed">
+                <label htmlFor="fruitRed" aria-label="fruitRed">
                   Red Wines:
                 </label>
-                <select name="colorRed" onChange={(e) => this.handleChange(e)}>
+                <select name="fruitRed" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
                   <option value="purple">Purple</option>
                   <option value="ruby">Ruby</option>
@@ -357,11 +342,11 @@ class AddTasting extends Component {
                   <option value="garnet">Garnet</option>
                 </select>
               </div>
-              <div className="colorRose">
-                <label htmlFor="colorRose" aria-label="colorRose">
+              <div className="fruitRose">
+                <label htmlFor="fruitRose" aria-label="fruitRose">
                   Roses:
                 </label>
-                <select name="colorRose" onChange={(e) => this.handleChange(e)}>
+                <select name="fruitRose" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
                   <option value="ligth-pink">Ligth Pink</option>
                   <option value="ligth-orange">Ligth Orange</option>
@@ -369,6 +354,378 @@ class AddTasting extends Component {
                   <option value="dark-pink">Dark Pink</option>
                 </select>
               </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Palate</legend>
+            <div className="sweetness">
+              <label htmlFor="sweetness" aria-label="sweetness">
+                Sweetness:
+              </label>
+              <select name="sweetness" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
+                <option value="tca">TCA</option>
+                <option value="h2s">H2S</option>
+                <option value="volatile-acidity">Volatile Acidity</option>
+                <option value="ethyl-acetate">Ethyl Acetate</option>
+                <option value="brettanomyces">Brettanomyces</option>
+                <option value="oxidation">Oxidation</option>
+                <option value="none">None</option>
+              </select>
+            </div>
+            <div className="fruitN">
+              <h3>Fruit Flavours</h3>
+              <div className="item">
+                <h4 className="gray">White Wines</h4>
+                <label>
+                  Citrus
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Apple/Pear
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Tropical/Melon
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+              <div className="item">
+                <h4 className="gray">Red Wines</h4>
+                <label>
+                  Red
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Black
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Blue
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+              <div className="item">
+                <h4 className="red-f">Non-fruit</h4>
+                <label>
+                  Floral
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Vegetable
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Herbal
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Spice
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Animal
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+              <div className="item">
+                <h4 className="red-f">Earth</h4>
+                <label>
+                  Florest Floor
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Compost
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Mushrooms
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Potting Soil
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+              <div className="item">
+                <h4 className="red-f">Mineral</h4>
+                <label>
+                  Mineral
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Wet Stone
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Limestone
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Chalk
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+                <label>
+                  Flint
+                  <input
+                    type="checkbox"
+                    onChange={(e) => this.handleChange(e)}
+                  />
+                  <span className="checkmark"></span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label htmlFor="tannins" aria-label="tannins">
+                Tannins:
+              </label>
+              <select name="tannins" onChange={(e) => this.handleChange(e)}>
+                <option value="low">Low</option>
+                <option value="med-">Med-</option>
+                <option value="medium">Medium</option>
+                <option value="med+">Med+</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="acidity" aria-label="acidity">
+                Acidity:
+              </label>
+              <select name="acidity" onChange={(e) => this.handleChange(e)}>
+                <option value="low">Low</option>
+                <option value="med-">Med-</option>
+                <option value="medium">Medium</option>
+                <option value="med+">Med+</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="alcohol" aria-label="alcohol">
+                Alcohol:
+              </label>
+              <select name="alcohol" onChange={(e) => this.handleChange(e)}>
+                <option value="low">Low</option>
+                <option value="med-">Med-</option>
+                <option value="medium">Medium</option>
+                <option value="med+">Med+</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="complexity" aria-label="complexity">
+                Complexity:
+              </label>
+              <select name="complexity" onChange={(e) => this.handleChange(e)}>
+                <option value="low">Low</option>
+                <option value="med-">Med-</option>
+                <option value="medium">Medium</option>
+                <option value="med+">Med+</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="length" aria-label="length">
+                Length:
+              </label>
+              <select name="length" onChange={(e) => this.handleChange(e)}>
+                <option value="short">Short</option>
+                <option value="med-">Med-</option>
+                <option value="medium">Medium</option>
+                <option value="med+">Med+</option>
+                <option value="long">Long</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="body" aria-label="body">
+                Body:
+              </label>
+              <select name="body" onChange={(e) => this.handleChange(e)}>
+                <option value="ligth">Ligth</option>
+                <option value="medium">Medium</option>
+                <option value="full">Full</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="texture" aria-label="texture">
+                Texture:
+              </label>
+              <select name="texture" onChange={(e) => this.handleChange(e)}>
+                <option value="creamy">Creamy</option>
+                <option value="round">Round</option>
+                <option value="lean">Lean</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Conclusion</legend>
+            <h4 className="red-f">Wood</h4>
+            <div className="item">
+              <h4 className="gray">Age</h4>
+              <label>
+                Old
+                <input
+                  type="radio"
+                  id="age-old-p"
+                  name="age-p"
+                  value="old"
+                  onChange={(e) => this.handleChange(e)}
+                />
+              </label>
+              <label>
+                New
+                <input
+                  type="radio"
+                  id="age-new-p"
+                  name="age-p"
+                  value="new"
+                  onChange={(e) => this.handleChange(e)}
+                />
+              </label>
+            </div>
+            <div className="item">
+              <h4 className="gray">Size</h4>
+              <label>
+                Small
+                <input
+                  type="radio"
+                  id="size-s-p"
+                  name="size-p"
+                  value="small"
+                  onChange={(e) => this.handleChange(e)}
+                />
+              </label>
+              <label>
+                Large
+                <input
+                  type="radio"
+                  id="size-l-p"
+                  name="size-p"
+                  value="large"
+                  onChange={(e) => this.handleChange(e)}
+                />
+              </label>
+            </div>
+            <div className="item">
+              <h4 className="gray">Origin</h4>
+              <label>
+                American
+                <input
+                  type="radio"
+                  id="origin-american-p"
+                  name="origin-p"
+                  value="american"
+                  onChange={(e) => this.handleChange(e)}
+                />
+              </label>
+              <label>
+                French
+                <input
+                  type="radio"
+                  id="origin-french-p"
+                  name="origin-p"
+                  value="french"
+                  onChange={(e) => this.handleChange(e)}
+                />
+              </label>
+            </div>
+            <h4 className="red-f">Comments</h4>
+            <textarea
+              id="comments"
+              name="wine-review"
+              rows="5"
+              cols="70"
+              onChange={(e) => this.handleChange(e)}
+              placeholder="Spectacular wine from Salta. Deep red. Complex, red and ripe fruits..."
+            ></textarea>
+            <div className="score">
+              <label htmlFor="score" aria-label="score">
+                Score:
+              </label>
+              <select name="score" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
+                <option value="50-74">50-74</option>
+                <option value="75-79">75-79</option>
+                <option value="80-84">80-84</option>
+                <option value="85-89">85-89</option>
+                <option value="90-94">90-94</option>
+                <option value="95-100">95-100</option>
+              </select>
             </div>
           </fieldset>
           <button type="button" onClick={this.handleClickCancel}>

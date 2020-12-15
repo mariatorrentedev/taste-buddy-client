@@ -48,7 +48,7 @@ class TastingList extends Component {
           <input
             type="text"
             id="search-term"
-            placeholder="Wine Name"
+            placeholder="Wine name search..."
             onChange={(e) => this.setFilter("wineName", e.target.value)}
           ></input>
         </section>
