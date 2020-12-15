@@ -110,46 +110,46 @@ export default class TastingItem extends React.Component {
           {this.state.opened && (
             <section className="tasting-item-expanded">
               <div className="wine-profile">
-                <li>{varietal}</li>
-                <li>{producer}</li>
-                <li>{vintage}</li>
-                <li>{region}</li>
+                <p>{varietal}</p>
+                <p>{producer}</p>
+                <p>{vintage}</p>
+                <p>{region}</p>
               </div>
               <div className="wine-sigth">
-                <li>{condition}</li>
-                <li>{concentration}</li>
-                <li>{colorRed}</li>
-                <li>{rim}</li>
-                <li>{extract}</li>
-                <li>{tearing}</li>
-                <li>{gas}</li>
+                <p>{condition}</p>
+                <p>{concentration}</p>
+                <p>{colorRed}</p>
+                <p>{rim}</p>
+                <p>{extract}</p>
+                <p>{tearing}</p>
+                <p>{gas}</p>
               </div>
               <div className="wine-nose">
-                <li>{conditionNose}</li>
-                <li>{intensity}</li>
-                <li>{ageAssessment}</li>
-                <li>{fruitRed}</li>
+                <p>{conditionNose}</p>
+                <p>{intensity}</p>
+                <p>{ageAssessment}</p>
+                <p>{fruitRed}</p>
               </div>
               <div className="wine-palate">
-                <li>{sweetness}</li>
-                <li>{fruitFRed}</li>
-                <li>{nonFruit}</li>
-                <li>{earth}</li>
-                <li>{mineral}</li>
-                <li>{tannins}</li>
-                <li>{acidity}</li>
-                <li>{alcohol}</li>
-                <li>{complexity}</li>
-                <li>{length}</li>
-                <li>{body}</li>
-                <li>{texture}</li>
+                <p>{sweetness}</p>
+                <p>{fruitFRed}</p>
+                <p>{nonFruit}</p>
+                <p>{earth}</p>
+                <p>{mineral}</p>
+                <p>{tannins}</p>
+                <p>{acidity}</p>
+                <p>{alcohol}</p>
+                <p>{complexity}</p>
+                <p>{length}</p>
+                <p>{body}</p>
+                <p>{texture}</p>
               </div>
               <div className="conclusion">
-                <li>{woodAge}</li>
-                <li>{woodOrigin}</li>
-                <li>{woodSize}</li>
-                <li>{comments}</li>
-                <li>{score}</li>
+                <p>{woodAge}</p>
+                <p>{woodOrigin}</p>
+                <p>{woodSize}</p>
+                <p>{comments}</p>
+                <p>{score}</p>
               </div>
             </section>
           )}

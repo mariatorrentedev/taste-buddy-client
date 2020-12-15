@@ -359,7 +359,7 @@ class EditTasting extends Component {
               </div>
               <div className="fruitN">
                 <h3>Fruit Notes</h3>
-                <div className="fruitWhite">
+                <div classNameName="fruitWhite">
                   <label htmlFor="fruitWhite" aria-label="fruitWhite">
                     White Wines:
                   </label>
@@ -818,7 +818,7 @@ class EditTasting extends Component {
                 cols="70"
                 placeholder="Spectacular wine from Salta. Deep red. Complex, red and ripe fruits..."
               ></textarea>
-              <div className="score">
+              <div classNameName="score">
                 <label htmlFor="score" aria-label="score">
                   Score:
                 </label>

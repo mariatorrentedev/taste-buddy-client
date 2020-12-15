@@ -69,14 +69,14 @@ class AddTasting extends Component {
           onSubmit={(e) => this.handleSubmit(e)}
         >
           {error && <p className="error">{error}</p>}
-          <div className="wine-name">
-            <label htmlFor="wine-name" aria-label="wine-name">
+          <div className="wineName">
+            <label htmlFor="wineName" aria-label="wineName">
               Name:
             </label>
             <input
               placeholder="eg. Yacochuya"
               type="text"
-              id="wine-name"
+              id="wineName"
               name="wineName"
               onChange={(e) => this.handleChange(e)}
             />
