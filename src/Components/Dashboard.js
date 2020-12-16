@@ -12,8 +12,6 @@ function Dashboard() {
           <p>70 points UP</p>
           <h3>Common varietals</h3>
           <p>Malbec, Pinot Noir, Torrontes.</p>
-          <h3>Top Countries</h3>
-          <p>Argentina, Spain, Italy</p>
         </div>
       </section>
     </div>

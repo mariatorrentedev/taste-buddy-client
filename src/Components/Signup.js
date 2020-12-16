@@ -1,10 +1,11 @@
 import React from "react";
+import AuthAPIService from "../services/auth-api-service";
 
 export default class Signup extends React.Component {
   state = {
     error: null,
   };
-  /*
+
   handleSubmit = (e) => {
     e.preventDefault();
     const { email, password, confirmPassword } = e.target;
@@ -12,7 +13,11 @@ export default class Signup extends React.Component {
 
     if (password.value !== confirmPassword.value) {
       return this.setState({ error: "Passwords do not match" });
-    
+    }
+    AuthAPIService.postUser({
+      email: email.value,
+      password: password.value,
+    })
       .then((user) => {
         this.props.history.push("/login");
       })
@@ -20,7 +25,7 @@ export default class Signup extends React.Component {
         this.setState({ error: res.error });
       });
   };
- */
+
   render() {
     return (
       <section>
@@ -32,10 +37,6 @@ export default class Signup extends React.Component {
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset>
-            <div className="flex-wrap">
-              <label htmlFor="name">Name: </label>
-              <input type="text" placeholder="name" name="name" id="name" />
-            </div>
             <div className="flex-wrap">
               <label htmlFor="new-email">Email:</label>
               <input

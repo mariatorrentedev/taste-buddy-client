@@ -11,6 +11,8 @@ import Dashboard from "./Components/Dashboard";
 import TastingList from "./Components/TastingList";
 import Context from "./Context";
 import EditTasting from "./Components/EditTasting";
+import PublicRoute from "./Utils/PublicRoute";
+import PrivateRoute from "./Utils/PublicRoute";
 
 const tastings = [
   {
@@ -137,7 +139,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    // getTastings();
+    this.state.getTastings();
   }
 
   render() {
@@ -146,14 +148,14 @@ class App extends Component {
         <div className="app">
           <Route path="/" component={Nav} />
           <Route exact path="/" component={LandingPage} />
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
+          <PublicRoute path="/signup" component={Signup} />
+          <PublicRoute path="/login" component={Login} />
           <div className="main">
-            <Route path="/tastings/add" component={AddTasting} />
-            <Route path="/edittasting/:id" component={EditTasting} />
-            <Route path="/home" component={Home} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route exact path="/tastings" component={TastingList} />
+            <PublicRoute path="/tastings/add" component={AddTasting} />
+            <PublicRoute path="/edittasting/:id" component={EditTasting} />
+            <PublicRoute path="/home" component={Home} />
+            <PublicRoute path="/dashboard" component={Dashboard} />
+            <PublicRoute exact path="/tastings" component={TastingList} />
           </div>
         </div>
       </Context.Provider>

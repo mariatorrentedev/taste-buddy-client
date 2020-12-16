@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import config from "../config";
 import Context from "../Context";
-import { CountryDropdown } from "react-country-region-selector";
 
 class AddTasting extends Component {
   static contextType = Context;
@@ -9,10 +8,6 @@ class AddTasting extends Component {
     error: null,
     newTasting: {},
   };
-
-  selectCountry(val) {
-    this.setState({ country: val });
-  }
 
   handleChange(e) {
     this.setState({
@@ -115,15 +110,6 @@ class AddTasting extends Component {
               id="vintage"
               name="vintage"
               onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="country">
-            <label htmlFor="country" aria-label="country">
-              Country:
-            </label>
-            <CountryDropdown
-              value={country}
-              onChange={(val) => this.selectCountry(val)}
             />
           </div>
           <div className="region">

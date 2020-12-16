@@ -1,8 +1,11 @@
 import React from "react";
 import AuthAPIService from "../services/auth-api-service";
-import { API_BASE_URL } from "../config";
-import { Link } from "react-router-dom";
+import config from "../config";
+import TokenService from "../services/token-service";
+import Context from "../Context";
+
 export default class Login extends React.Component {
+  static contextType = Context;
   state = {
     error: null,
   };
@@ -15,7 +18,7 @@ export default class Login extends React.Component {
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
-        this.props.history.push("/home");
+        this.props.history.push("/dashboard");
       })
       .then((res) => {
         const options = {
@@ -25,7 +28,7 @@ export default class Login extends React.Component {
             Accept: "application/json",
           },
         };
-        fetch(`${API_BASE_URL}/api/users`, options)
+        fetch(`${config.API_BASE_URL}/api/users`, options)
           .then((res) => {
             if (!res.ok) {
               return Promise.reject(res.statusText);

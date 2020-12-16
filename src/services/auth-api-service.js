@@ -12,6 +12,7 @@ export default {
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
     );
   },
+
   loginUser(user) {
     return fetch(`${config.API_BASE_URL}/auth/login`, {
       method: "POST",
