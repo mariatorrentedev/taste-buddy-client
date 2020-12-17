@@ -8,55 +8,7 @@ export default class TastingItem extends Component {
   state = {
     opened: false,
   };
-  /*static defaultProps = {
-    //Profile
-    wineName: "",
-    producer: "",
-    varietal: "",
-    vintage: "",
-    region: "",
-    //Sigth
-    condition: "",
-    concentration: "",
-    colorRed: "",
-    colorWhite: "",
-    colorRose: "",
-    rim: "",
-    extract: "",
-    tearing: "",
-    gas: "",
-    //Nose
-    conditionNose: "",
-    intensity: "",
-    ageAssessment: "",
-    fruitRed: "",
-    fruitWhite: "",
-    fruitRose: "",
-    //Palate
-    sweetnesss: "",
-    fruitFRed: "",
-    fruitFWhite: "",
-    fruitFRose: "",
-    nonFruitF: "",
-    earth: "",
-    mineral: "",
-    woodAge: "",
-    woodSize: "",
-    woodOrigin: "",
-    tannins: "",
-    acidity: "",
-    alcohol: "",
-    complexity: "",
-    length: "",
-    body: "",
-    texture: "",
-    //Conclusion
-    comments: "",
-    woodAge: "",
-    woodSize: "",
-    woodOrigin: "",
-    score: "",
-  };*/
+
   render() {
     const {
       winename,

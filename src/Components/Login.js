@@ -18,7 +18,7 @@ export default class Login extends React.Component {
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
-        this.props.history.push("/dashboard");
+        this.props.history.push("/home");
       })
       .catch((res) => {
         this.setState({ error: res.error });
