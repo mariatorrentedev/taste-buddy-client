@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import Context from "../Context";
 import DeleteButton from "./DeleteButton";
 
-export default class TastingItem extends React.Component {
+export default class TastingItem extends Component {
   static contextType = Context;
   state = {
     opened: false,
   };
-  static defaultProps = {
+  /*static defaultProps = {
     //Profile
     wineName: "",
     producer: "",
@@ -56,34 +56,34 @@ export default class TastingItem extends React.Component {
     woodSize: "",
     woodOrigin: "",
     score: "",
-  };
+  };*/
   render() {
     const {
-      wineName,
+      winename,
       producer,
       varietal,
       vintage,
       region,
       condition,
       concentration,
-      colorRed,
-      colorWhite,
-      colorRose,
+      colorred,
+      colorwhite,
+      colorose,
       rim,
       extract,
       tearing,
       gas,
-      conditionNose,
+      conditionnose,
       intensity,
-      ageAssessment,
-      fruitRed,
-      fruitWhite,
-      fruitRose,
+      ageassessment,
+      fruitred,
+      fruitwhite,
+      fruitrose,
       sweetness,
-      fruitFRed,
-      fruitFWhite,
-      fruitFRose,
-      nonFruit,
+      fruitfred,
+      fruitfwhite,
+      fruitfrose,
+      nonfruit,
       earth,
       mineral,
       tannins,
@@ -93,9 +93,9 @@ export default class TastingItem extends React.Component {
       length,
       body,
       texture,
-      woodAge,
-      woodSize,
-      woodOrigin,
+      woodage,
+      woodsize,
+      woodorigin,
       comments,
       score,
     } = this.props;
@@ -106,7 +106,7 @@ export default class TastingItem extends React.Component {
           className="tasting-item-content"
           onClick={() => this.setState({ opened: !this.state.opened })}
         >
-          <h2 className="tasting-item-wineName">{wineName}</h2>
+          <h2 className="tasting-item-wineName">{winename}</h2>
           {this.state.opened && (
             <section className="tasting-item-expanded">
               <div className="wine-profile">
@@ -118,22 +118,22 @@ export default class TastingItem extends React.Component {
               <div className="wine-sigth">
                 <p>{condition}</p>
                 <p>{concentration}</p>
-                <p>{colorRed}</p>
+                <p>{colorred}</p>
                 <p>{rim}</p>
                 <p>{extract}</p>
                 <p>{tearing}</p>
                 <p>{gas}</p>
               </div>
               <div className="wine-nose">
-                <p>{conditionNose}</p>
+                <p>{conditionnose}</p>
                 <p>{intensity}</p>
-                <p>{ageAssessment}</p>
-                <p>{fruitRed}</p>
+                <p>{ageassessment}</p>
+                <p>{fruitred}</p>
               </div>
               <div className="wine-palate">
                 <p>{sweetness}</p>
-                <p>{fruitFRed}</p>
-                <p>{nonFruit}</p>
+                <p>{fruitfred}</p>
+                <p>{nonfruit}</p>
                 <p>{earth}</p>
                 <p>{mineral}</p>
                 <p>{tannins}</p>
@@ -145,9 +145,9 @@ export default class TastingItem extends React.Component {
                 <p>{texture}</p>
               </div>
               <div className="conclusion">
-                <p>{woodAge}</p>
-                <p>{woodOrigin}</p>
-                <p>{woodSize}</p>
+                <p>{woodage}</p>
+                <p>{woodorigin}</p>
+                <p>{woodsize}</p>
                 <p>{comments}</p>
                 <p>{score}</p>
               </div>

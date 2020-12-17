@@ -6,7 +6,7 @@ class TastingList extends Component {
   static contextType = Context;
   state = {
     filter: {
-      wineName: "",
+      winename: "",
     },
     filterValue: "all",
   };
@@ -21,9 +21,9 @@ class TastingList extends Component {
     let { tastings = [] } = this.context;
     let { filter } = this.state;
 
-    if (filter.wineName !== "") {
+    if (filter.winename !== "") {
       tastings = tastings.filter((t) =>
-        t.wineName.toLowerCase().includes(filter.wineName.toLowerCase())
+        t.winename.toLowerCase().includes(filter.winename.toLowerCase())
       );
     }
 
@@ -49,7 +49,7 @@ class TastingList extends Component {
             type="text"
             id="search-term"
             placeholder="Wine name search..."
-            onChange={(e) => this.setFilter("wineName", e.target.value)}
+            onChange={(e) => this.setFilter("winename", e.target.value)}
           ></input>
         </section>
         <div className="all-filters">

@@ -3,7 +3,7 @@ import config from "../config";
 export default {
   postUser(user) {
     return fetch(`${config.API_BASE_URL}/users`, {
-      method: "post",
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },

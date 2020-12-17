@@ -11,87 +11,13 @@ import Dashboard from "./Components/Dashboard";
 import TastingList from "./Components/TastingList";
 import Context from "./Context";
 import EditTasting from "./Components/EditTasting";
-import PublicRoute from "./Utils/PublicRoute";
-import PrivateRoute from "./Utils/PublicRoute";
-
-const tastings = [
-  {
-    id: 0,
-    wineName: "Yacochuya",
-    producer: "The Etcharts",
-    varietal: "Malbec",
-    vintage: "2007",
-    region: "Salta Cafaye Valley",
-    condition: "Clear",
-    concentration: "Pale",
-    colorRed: "Purple",
-    rim: "No",
-    extract: "Ligth",
-    tearing: "Medium",
-    gas: "Yes",
-    conditionNose: "None",
-    intensity: "Delicate",
-    ageAssessment: "Youthful",
-    fruitRed: "Tropical/Melon",
-    sweetness: "Bone Dry",
-    fruitFRed: "Red",
-    nonFruit: "Vegetable, Spice ",
-    earth: "Compost",
-    mineral: "Wet Stone",
-    tannins: "High",
-    acidity: "Med+",
-    alcohol: "Medium",
-    complexity: "Med+",
-    length: "Long",
-    body: "Full",
-    texture: "Creamy",
-    comments: "Spectacular wine from Salta, deep red, complex and ripe fruits",
-    woodAge: "Old",
-    woodOrigin: "American",
-    woodSize: "Large",
-    score: "85-89",
-  },
-  {
-    id: 1,
-    wineName: "Poliziano",
-    producer: "Federico Carletti",
-    varietal: "Sangiovese",
-    vintage: "2017",
-    region: "Montepulciano",
-    condition: "Hazy",
-    concentration: "Medium",
-    colorRed: "Ruby",
-    rim: "Yes",
-    extract: "Heavy",
-    tearing: "Medium",
-    gas: "Yes",
-    conditionNose: "TCA",
-    intensity: "Moderate",
-    ageAssessment: "Vinous",
-    fruitRed: "Black",
-    sweetness: "Bone Dry",
-    fruitFRed: "Black, Blue",
-    nonFruit: "Animal",
-    earth: "Mushrooms",
-    mineral: "Limestone",
-    tannins: "Low",
-    acidity: "Medium",
-    alcohol: "Med+",
-    complexity: "High",
-    length: "Short",
-    body: "Ligth",
-    texture: "Round",
-    comments: "Spectacular wine from Italy",
-    woodAge: "Old",
-    woodOrigin: "American",
-    woodSize: "Large",
-    score: "95-100",
-  },
-];
+import PrivateRoute from "./Utils/PrivateRoute";
+import tokenService from "./services/token-service";
 
 class App extends Component {
   state = {
-    tastings,
+    user: {},
+    tastings: [],
     error: null,
     setTastings: (tastings) => {
       this.setState({
@@ -120,11 +46,11 @@ class App extends Component {
       });
     },
     getTastings: () => {
-      fetch(config.API_BASE_URL, {
+      fetch(`${config.API_BASE_URL}/tastings`, {
         method: "GET",
         headers: {
           "content-type": "application/json",
-          Authorization: `Bearer ${config.API_KEY}`,
+          Authorization: `Bearer ${tokenService.getAuthToken()}`,
         },
       })
         .then((res) => {
@@ -133,8 +59,11 @@ class App extends Component {
           }
           return res.json();
         })
-        .then(this.setTastings)
+        .then(this.state.setTastings)
         .catch((error) => this.setState({ error }));
+    },
+    loginUser: (user) => {
+      return this.setState({ user });
     },
   };
 
@@ -148,14 +77,14 @@ class App extends Component {
         <div className="app">
           <Route path="/" component={Nav} />
           <Route exact path="/" component={LandingPage} />
-          <PublicRoute path="/signup" component={Signup} />
-          <PublicRoute path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
           <div className="main">
-            <PublicRoute path="/tastings/add" component={AddTasting} />
-            <PublicRoute path="/edittasting/:id" component={EditTasting} />
-            <PublicRoute path="/home" component={Home} />
-            <PublicRoute path="/dashboard" component={Dashboard} />
-            <PublicRoute exact path="/tastings" component={TastingList} />
+            <PrivateRoute path="/tastings/add" component={AddTasting} />
+            <PrivateRoute path="/edittasting/:id" component={EditTasting} />
+            <PrivateRoute path="/home" component={Home} />
+            <PrivateRoute path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path="/tastings" component={TastingList} />
           </div>
         </div>
       </Context.Provider>

@@ -20,26 +20,6 @@ export default class Login extends React.Component {
         TokenService.saveAuthToken(loginResponse.authToken);
         this.props.history.push("/dashboard");
       })
-      .then((res) => {
-        const options = {
-          method: "GET",
-          headers: {
-            Authorization: `Bearer ${TokenService.hasAuthToken()}`,
-            Accept: "application/json",
-          },
-        };
-        fetch(`${config.API_BASE_URL}/api/users`, options)
-          .then((res) => {
-            if (!res.ok) {
-              return Promise.reject(res.statusText);
-            }
-            return res.json();
-          })
-          .then((user) => this.context.loginUser(user))
-          .catch((res) => {
-            this.setState({ error: res.error });
-          });
-      })
       .catch((res) => {
         this.setState({ error: res.error });
       });
@@ -52,7 +32,7 @@ export default class Login extends React.Component {
         <form
           className="form"
           aria-label="login-form"
-          onSubmit={(e) => this.handleLogin}
+          onSubmit={this.handleLogin}
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset aria-label="email">

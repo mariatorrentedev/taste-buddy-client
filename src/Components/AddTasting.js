@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import config from "../config";
 import Context from "../Context";
+import tokenService from "../services/token-service";
 
 class AddTasting extends Component {
   static contextType = Context;
@@ -22,12 +23,12 @@ class AddTasting extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({ error: null });
-    /*fetch(`${config.API_BASE_URL}/tastings`, {
+    fetch(`${config.API_BASE_URL}/tastings`, {
       method: "POST",
       body: JSON.stringify(this.state.newTasting),
       headers: {
         "content-type": "application/json",
-        authorization: `Bearer ${config.API_KEY}`,
+        authorization: `Bearer ${tokenService.getAuthToken()}`,
       },
     })
       .then((res) => {
@@ -40,21 +41,16 @@ class AddTasting extends Component {
       })
       .then((newTasting) => {
         e.target.reset();
-        this.setState({
-          tastings: [...this.state.tastings, newTasting],
-          newTasting: {},
-        });
+        this.context.addTasting(this.state.newTasting);
+        this.props.history.push("/tastings");
       })
       .catch((e) => {
         this.setState({ error: e.message });
-      });*/
-
-    this.context.addTasting(this.state.newTasting);
-    this.props.history.push("/tastings");
+      });
   };
 
   render() {
-    const { country, error } = this.state;
+    const { error } = this.state;
     return (
       <div>
         <h2>DEDUCTIVE FORMAT</h2>
@@ -64,15 +60,16 @@ class AddTasting extends Component {
           onSubmit={(e) => this.handleSubmit(e)}
         >
           {error && <p className="error">{error}</p>}
-          <div className="wineName">
-            <label htmlFor="wineName" aria-label="wineName">
+          <div className="winename">
+            <label htmlFor="winename" aria-label="winename">
               Name:
             </label>
             <input
               placeholder="eg. Yacochuya"
               type="text"
-              id="wineName"
-              name="wineName"
+              id="winename"
+              defaultValue="Amarone Della Valpolicella"
+              name="winename"
               onChange={(e) => this.handleChange(e)}
             />
           </div>
@@ -84,6 +81,7 @@ class AddTasting extends Component {
               placeholder="eg.The Etcharts"
               type="text"
               id="producer"
+              defaultValue="Allegrini"
               name="producer"
               onChange={(e) => this.handleChange(e)}
             />
@@ -97,6 +95,7 @@ class AddTasting extends Component {
               type="text"
               id="varietal"
               name="varietal"
+              defaultValue="Corvina"
               onChange={(e) => this.handleChange(e)}
             />
           </div>
@@ -109,6 +108,7 @@ class AddTasting extends Component {
               type="number"
               id="vintage"
               name="vintage"
+              defaultValue="2015"
               onChange={(e) => this.handleChange(e)}
             />
           </div>
@@ -121,6 +121,7 @@ class AddTasting extends Component {
               type="text"
               id="region"
               name="region"
+              defaultValue="Veneto"
               onChange={(e) => this.handleChange(e)}
             />
           </div>
@@ -153,12 +154,12 @@ class AddTasting extends Component {
             </div>
             <div className="color">
               <h3>Color</h3>
-              <div className="colorWhite">
-                <label htmlFor="colorWhite" aria-label="colorWhite">
+              <div className="colorwhite">
+                <label htmlFor="colorwhite" aria-label="colorwhite">
                   White Wines:
                 </label>
                 <select
-                  name="colorWhite"
+                  name="colorwhite"
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
@@ -168,11 +169,11 @@ class AddTasting extends Component {
                   <option value="gold">Gold</option>
                 </select>
               </div>
-              <div className="colorRed">
-                <label htmlFor="colorRed" aria-label="colorRed">
+              <div className="colorred">
+                <label htmlFor="colorred" aria-label="colorred">
                   Red Wines:
                 </label>
-                <select name="colorRed" onChange={(e) => this.handleChange(e)}>
+                <select name="colorred" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
                   <option value="purple">Purple</option>
                   <option value="ruby">Ruby</option>
@@ -180,11 +181,11 @@ class AddTasting extends Component {
                   <option value="garnet">Garnet</option>
                 </select>
               </div>
-              <div className="colorRose">
-                <label htmlFor="colorRose" aria-label="colorRose">
+              <div className="colorrose">
+                <label htmlFor="colorrose" aria-label="colorrose">
                   Roses:
                 </label>
-                <select name="colorRose" onChange={(e) => this.handleChange(e)}>
+                <select name="colorrose" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
                   <option value="ligth-pink">Ligth Pink</option>
                   <option value="ligth-orange">Ligth Orange</option>
@@ -197,7 +198,7 @@ class AddTasting extends Component {
               <h3>Rim Variation</h3>
               <input
                 id="yes-rim"
-                value="yes"
+                value="true"
                 name="rim"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -205,7 +206,7 @@ class AddTasting extends Component {
               Yes
               <input
                 id="no-rim"
-                value="no"
+                value="false"
                 name="rim"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -238,7 +239,7 @@ class AddTasting extends Component {
               <h3>Gas Evidence</h3>
               <input
                 id="yes-gas"
-                value="yes"
+                value="true"
                 name="gas"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -246,7 +247,7 @@ class AddTasting extends Component {
               Yes
               <input
                 id="no-gas"
-                value="no"
+                value="false"
                 name="gas"
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
@@ -256,12 +257,12 @@ class AddTasting extends Component {
           </fieldset>
           <fieldset>
             <legend>Nose</legend>
-            <div className="conditionNose">
-              <label htmlFor="conditionNose" aria-label="conditionNose">
+            <div className="conditionnose">
+              <label htmlFor="conditionnose" aria-label="conditionnose">
                 Condition:
               </label>
               <select
-                name="conditionNose"
+                name="conditionnose"
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
@@ -285,12 +286,12 @@ class AddTasting extends Component {
                 <option value="powerfull">Powerfull</option>
               </select>
             </div>
-            <div className="ageAssessment">
-              <label htmlFor="ageAssessment" aria-label="ageAssessment">
+            <div className="ageassessment">
+              <label htmlFor="ageassessment" aria-label="ageassessment">
                 Age Assessment:
               </label>
               <select
-                name="ageAssessment"
+                name="ageassessment"
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
@@ -301,12 +302,12 @@ class AddTasting extends Component {
             </div>
             <div className="fruitN">
               <h3>Fruit Notes</h3>
-              <div className="fruitWhite">
-                <label htmlFor="fruitWhite" aria-label="fruitWhite">
+              <div className="fruitwhite">
+                <label htmlFor="fruitwhite" aria-label="fruitwhite">
                   White Wines:
                 </label>
                 <select
-                  name="fruitWhite"
+                  name="fruitwhite"
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
@@ -316,11 +317,11 @@ class AddTasting extends Component {
                   <option value="gold">Gold</option>
                 </select>
               </div>
-              <div className="fruitRed">
-                <label htmlFor="fruitRed" aria-label="fruitRed">
+              <div className="fruitred">
+                <label htmlFor="fruitred" aria-label="fruitred">
                   Red Wines:
                 </label>
-                <select name="fruitRed" onChange={(e) => this.handleChange(e)}>
+                <select name="fruitred" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
                   <option value="purple">Purple</option>
                   <option value="ruby">Ruby</option>
@@ -328,11 +329,11 @@ class AddTasting extends Component {
                   <option value="garnet">Garnet</option>
                 </select>
               </div>
-              <div className="fruitRose">
-                <label htmlFor="fruitRose" aria-label="fruitRose">
+              <div className="fruitrose">
+                <label htmlFor="fruitrose" aria-label="fruitrose">
                   Roses:
                 </label>
-                <select name="fruitRose" onChange={(e) => this.handleChange(e)}>
+                <select name="fruitrose" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
                   <option value="ligth-pink">Ligth Pink</option>
                   <option value="ligth-orange">Ligth Orange</option>
@@ -367,6 +368,8 @@ class AddTasting extends Component {
                   Citrus
                   <input
                     type="checkbox"
+                    value="citrus"
+                    name="fruitfwhite"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -375,6 +378,8 @@ class AddTasting extends Component {
                   Apple/Pear
                   <input
                     type="checkbox"
+                    value="apple,pear"
+                    name="fruitfwhite"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -383,6 +388,8 @@ class AddTasting extends Component {
                   Tropical/Melon
                   <input
                     type="checkbox"
+                    value="tropical,melon"
+                    name="fruitfwhite"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -394,6 +401,8 @@ class AddTasting extends Component {
                   Red
                   <input
                     type="checkbox"
+                    value="red"
+                    name="fruitfred"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -402,6 +411,8 @@ class AddTasting extends Component {
                   Black
                   <input
                     type="checkbox"
+                    value="black"
+                    name="fruitfred"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -410,6 +421,8 @@ class AddTasting extends Component {
                   Blue
                   <input
                     type="checkbox"
+                    value="blue"
+                    name="fruitfred"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -421,6 +434,8 @@ class AddTasting extends Component {
                   Floral
                   <input
                     type="checkbox"
+                    value="floral"
+                    name="nonfruit"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -429,6 +444,8 @@ class AddTasting extends Component {
                   Vegetable
                   <input
                     type="checkbox"
+                    value="vegetable"
+                    name="nonfruit"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -437,6 +454,8 @@ class AddTasting extends Component {
                   Herbal
                   <input
                     type="checkbox"
+                    value="herbal"
+                    name="nonfruit"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -445,6 +464,8 @@ class AddTasting extends Component {
                   Spice
                   <input
                     type="checkbox"
+                    value="spice"
+                    name="nonfruit"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -453,6 +474,8 @@ class AddTasting extends Component {
                   Animal
                   <input
                     type="checkbox"
+                    value="animal"
+                    name="nonfruit"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -464,6 +487,8 @@ class AddTasting extends Component {
                   Florest Floor
                   <input
                     type="checkbox"
+                    value="florest floor"
+                    name="earth"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -472,6 +497,8 @@ class AddTasting extends Component {
                   Compost
                   <input
                     type="checkbox"
+                    value="compost"
+                    name="earth"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -480,6 +507,8 @@ class AddTasting extends Component {
                   Mushrooms
                   <input
                     type="checkbox"
+                    value="mushrooms"
+                    name="earth"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -488,6 +517,8 @@ class AddTasting extends Component {
                   Potting Soil
                   <input
                     type="checkbox"
+                    value="potting soil"
+                    name="earth"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -499,6 +530,8 @@ class AddTasting extends Component {
                   Mineral
                   <input
                     type="checkbox"
+                    value="mineral"
+                    name="mineral"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -507,6 +540,8 @@ class AddTasting extends Component {
                   Wet Stone
                   <input
                     type="checkbox"
+                    value="wetstone"
+                    name="mineral"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -515,6 +550,8 @@ class AddTasting extends Component {
                   Limestone
                   <input
                     type="checkbox"
+                    value="limestone"
+                    name="mineral"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -523,6 +560,8 @@ class AddTasting extends Component {
                   Chalk
                   <input
                     type="checkbox"
+                    value="chalk"
+                    name="mineral"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -531,6 +570,8 @@ class AddTasting extends Component {
                   Flint
                   <input
                     type="checkbox"
+                    value="flint"
+                    name="mineral"
                     onChange={(e) => this.handleChange(e)}
                   />
                   <span className="checkmark"></span>
@@ -627,8 +668,8 @@ class AddTasting extends Component {
                 Old
                 <input
                   type="radio"
-                  id="age-old-p"
-                  name="age-p"
+                  id="wood-old"
+                  name="woodage"
                   value="old"
                   onChange={(e) => this.handleChange(e)}
                 />
@@ -637,8 +678,8 @@ class AddTasting extends Component {
                 New
                 <input
                   type="radio"
-                  id="age-new-p"
-                  name="age-p"
+                  id="wood-new"
+                  name="woodage"
                   value="new"
                   onChange={(e) => this.handleChange(e)}
                 />
@@ -650,8 +691,8 @@ class AddTasting extends Component {
                 Small
                 <input
                   type="radio"
-                  id="size-s-p"
-                  name="size-p"
+                  id="woodsize"
+                  name="woodsize"
                   value="small"
                   onChange={(e) => this.handleChange(e)}
                 />
@@ -660,8 +701,8 @@ class AddTasting extends Component {
                 Large
                 <input
                   type="radio"
-                  id="size-l-p"
-                  name="size-p"
+                  id="woodsize"
+                  name="woodsize"
                   value="large"
                   onChange={(e) => this.handleChange(e)}
                 />
@@ -673,8 +714,8 @@ class AddTasting extends Component {
                 American
                 <input
                   type="radio"
-                  id="origin-american-p"
-                  name="origin-p"
+                  id="woodorigin"
+                  name="woodorigin"
                   value="american"
                   onChange={(e) => this.handleChange(e)}
                 />
@@ -683,8 +724,8 @@ class AddTasting extends Component {
                 French
                 <input
                   type="radio"
-                  id="origin-french-p"
-                  name="origin-p"
+                  id="woodorigin"
+                  name="woodorigin"
                   value="french"
                   onChange={(e) => this.handleChange(e)}
                 />
@@ -693,7 +734,7 @@ class AddTasting extends Component {
             <h4 className="red-f">Comments</h4>
             <textarea
               id="comments"
-              name="wine-review"
+              name="comments"
               rows="5"
               cols="70"
               onChange={(e) => this.handleChange(e)}
@@ -705,12 +746,12 @@ class AddTasting extends Component {
               </label>
               <select name="score" onChange={(e) => this.handleChange(e)}>
                 <option value="">Select...</option>
-                <option value="50-74">50-74</option>
-                <option value="75-79">75-79</option>
-                <option value="80-84">80-84</option>
-                <option value="85-89">85-89</option>
-                <option value="90-94">90-94</option>
-                <option value="95-100">95-100</option>
+                <option value="50">50 </option>
+                <option value="75">75 </option>
+                <option value="80">80 </option>
+                <option value="85">85</option>
+                <option value="94">90</option>
+                <option value="100">100</option>
               </select>
             </div>
           </fieldset>
