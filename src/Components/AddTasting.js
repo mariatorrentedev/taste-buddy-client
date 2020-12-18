@@ -41,7 +41,7 @@ class AddTasting extends Component {
       })
       .then((newTasting) => {
         e.target.reset();
-        this.context.addTasting(this.state.newTasting);
+        this.context.addTasting(newTasting);
         this.props.history.push("/tastings");
       })
       .catch((e) => {

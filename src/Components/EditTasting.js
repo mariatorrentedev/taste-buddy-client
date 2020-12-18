@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import config from "../config";
 import Context from "../Context";
-import { CountryDropdown } from "react-country-region-selector";
+import tokenService from "../services/token-service";
 
 class EditTasting extends Component {
   static contextType = Context;
@@ -9,10 +9,6 @@ class EditTasting extends Component {
     error: null,
     newTasting: {},
   };
-
-  selectCountry(val) {
-    this.setState({ country: val });
-  }
 
   handleChange(e) {
     this.setState({
@@ -28,7 +24,7 @@ class EditTasting extends Component {
     e.preventDefault();
     const id = Number(this.props.match.params.id);
     this.setState({ error: null });
-    /*fetch(`${config.API_BASE_URL}/tastings/${id}`, {
+    fetch(`${config.API_BASE_URL}/tastings/${id}`, {
       method: "PUT",
       body: JSON.stringify(this.state.newTasting),
       headers: {
@@ -46,17 +42,16 @@ class EditTasting extends Component {
       })
       .then((newTasting) => {
         e.target.reset();
-        this.setState({
-          tastings: [...this.state.tastings, newTasting],
-          newTasting: {},
-        });
+        // this.setState({
+        //  tastings: [...this.state.tastings, newTasting],
+        //   newTasting: {},
+        // });
+        this.context.updateTasting(newTasting, id);
+        this.props.history.push("/tastings");
       })
       .catch((e) => {
         this.setState({ error: e.message });
-      });*/
-
-    this.context.updateTasting(this.state.newTasting, id);
-    this.props.history.push("/tastings");
+      });
   };
 
   componentDidMount() {
@@ -844,7 +839,7 @@ class EditTasting extends Component {
                 <option value="75">75 </option>
                 <option value="80">80 </option>
                 <option value="85">85</option>
-                <option value="94">90</option>
+                <option value="90">90</option>
                 <option value="100">100</option>
               </select>
             </div>
