@@ -53,7 +53,7 @@ export default class TastingItem extends Component {
     } = this.props;
 
     return (
-      <li className="tasting-item">
+      <li className="tasting-item" key="{tasting.id}">
         <div
           className="tasting-item-content"
           onClick={() => this.setState({ opened: !this.state.opened })}
