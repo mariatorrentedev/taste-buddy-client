@@ -31,10 +31,10 @@ class TastingList extends Component {
       tastings = tastings.filter((t) => t.varietal === filter.varietal);
     }
     if (filter.vintage && filter.vintage !== "all") {
-      tastings = tastings.filter((t) => t.vintage === filter.vintage);
+      tastings = tastings.filter((t) => t.vintage == filter.vintage);
     }
     if (filter.score && filter.score !== "all") {
-      tastings = tastings.filter((t) => t.score === filter.score);
+      tastings = tastings.filter((t) => t.score == filter.score);
     }
     return tastings;
   };

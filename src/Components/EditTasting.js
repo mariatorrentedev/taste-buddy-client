@@ -42,10 +42,6 @@ class EditTasting extends Component {
       })
       .then((newTasting) => {
         e.target.reset();
-        // this.setState({
-        //  tastings: [...this.state.tastings, newTasting],
-        //   newTasting: {},
-        // });
         this.context.updateTasting(newTasting, id);
         this.props.history.push("/tastings");
       })
