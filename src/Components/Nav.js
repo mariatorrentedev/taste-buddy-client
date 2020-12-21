@@ -26,10 +26,10 @@ export default class Nav extends React.Component {
                 <li>
                   <a
                     href="/logout"
-                    className="login"
-                    aria-label="logout-button"
+                    className="logout"
+                    aria-label="logout"
                     type="submit"
-                    onClick={(e) => this.logout()}
+                    onClick={(e) => this.logout(e)}
                   >
                     <img src="/images/logout.png" alt="logout-icon" />
                   </a>
@@ -38,7 +38,7 @@ export default class Nav extends React.Component {
                   <Link to="/tastings/add">+Tasting</Link>
                 </li>
                 <li>
-                  <Link to="/tastings">Wines</Link>
+                  <Link to="/tastings">Tastings</Link>
                 </li>
                 <li>
                   <Link to="/dashboard">Dashboard </Link>

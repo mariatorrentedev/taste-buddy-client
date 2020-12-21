@@ -20,7 +20,7 @@ export default class TastingItem extends Component {
       concentration,
       colorred,
       colorwhite,
-      colorose,
+      colorrose,
       rim,
       extract,
       tearing,
@@ -71,6 +71,8 @@ export default class TastingItem extends Component {
                 <p>{condition}</p>
                 <p>{concentration}</p>
                 <p>{colorred}</p>
+                <p>{colorwhite}</p>
+                <p>{colorrose}</p>
                 <p>{rim}</p>
                 <p>{extract}</p>
                 <p>{tearing}</p>
@@ -81,10 +83,14 @@ export default class TastingItem extends Component {
                 <p>{intensity}</p>
                 <p>{ageassessment}</p>
                 <p>{fruitred}</p>
+                <p>{fruitwhite}</p>
+                <p>{fruitrose}</p>
               </div>
               <div className="wine-palate">
                 <p>{sweetness}</p>
                 <p>{fruitfred}</p>
+                <p>{fruitfwhite}</p>
+                <p>{fruitfrose}</p>
                 <p>{nonfruit}</p>
                 <p>{earth}</p>
                 <p>{mineral}</p>

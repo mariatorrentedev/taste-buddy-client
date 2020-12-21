@@ -65,8 +65,8 @@ class App extends Component {
     loginUser: (user) => {
       return this.setState({ user });
     },
-    logout: (user) => {
-      return this.setState({ user: !user });
+    logout: () => {
+      return this.setState({});
     },
   };
 

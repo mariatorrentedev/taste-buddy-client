@@ -311,10 +311,10 @@ class AddTasting extends Component {
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
-                  <option value="water-white">Water White</option>
-                  <option value="straw">Straw</option>
-                  <option value="yellow">Yellow</option>
-                  <option value="gold">Gold</option>
+                  <option value="citrus">Citrus</option>
+                  <option value="apple,pear">Apple, Pear</option>
+                  <option value="Stone, pit">Stone,Pit</option>
+                  <option value="tropical,Melon">Tropical,Melon</option>
                 </select>
               </div>
               <div className="fruitred">
@@ -323,10 +323,10 @@ class AddTasting extends Component {
                 </label>
                 <select name="fruitred" onChange={(e) => this.handleChange(e)}>
                   <option value="">Select...</option>
-                  <option value="purple">Purple</option>
-                  <option value="ruby">Ruby</option>
-                  <option value="red">Red</option>
-                  <option value="garnet">Garnet</option>
+                  <option value="red ripe">Red Ripe</option>
+                  <option value="fresh">Fresh</option>
+                  <option value="black tart">Black Tart</option>
+                  <option value="blue jammy">Blue Jammy</option>
                 </select>
               </div>
               <div className="fruitrose">
@@ -351,13 +351,12 @@ class AddTasting extends Component {
               </label>
               <select name="sweetness" onChange={(e) => this.handleChange(e)}>
                 <option value="">Select...</option>
-                <option value="tca">TCA</option>
-                <option value="h2s">H2S</option>
-                <option value="volatile-acidity">Volatile Acidity</option>
-                <option value="ethyl-acetate">Ethyl Acetate</option>
-                <option value="brettanomyces">Brettanomyces</option>
-                <option value="oxidation">Oxidation</option>
-                <option value="none">None</option>
+                <option value="bone-dry">Bone Dry</option>
+                <option value="dry">Dry</option>
+                <option value="off-dry">Off Dry</option>
+                <option value="medium-sweet">Medium Sweet</option>
+                <option value="sweet">Sweet</option>
+                <option value="lusciously sweet">Lusciously Sweet</option>
               </select>
             </div>
             <div className="fruitN">
