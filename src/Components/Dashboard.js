@@ -6,18 +6,27 @@ class Dashboard extends Component {
   state = {};
   render() {
     let { tastings = [] } = this.context;
-    let avgScore = tastings.map((t) => t.score / t.length);
+    // Average Score per user
+    let scores = tastings.map(({ score }) => score);
+    const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
+    // Most common varietals
+    let varietals = tastings.map(({ varietal }) => varietal);
+
     return (
       <div className="dashboard">
         <section>
           <h2>TasteBuddy Summary</h2>
           <div className="flex">
             <h3>Total TasteBuddy Sheets</h3>
-            <p>You've done {tastings.length} tasting</p>
+            <p>
+              You've done <strong>{tastings.length}</strong> tasting
+            </p>
             <h3>Your average score</h3>
-            <p>{Number(avgScore)} points UP</p>
+            <p>
+              <strong>{avgScore}</strong> points UP
+            </p>
             <h3>Common varietals</h3>
-            {/*Map tastings arr and then tastings.varietals take the top 3 varietals that are repeat by user*/}
+            {}
             <p>Malbec, Pinot Noir, Torrontes.</p>
           </div>
         </section>

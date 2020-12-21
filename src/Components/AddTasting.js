@@ -749,7 +749,7 @@ class AddTasting extends Component {
                 <option value="75">75 </option>
                 <option value="80">80 </option>
                 <option value="85">85</option>
-                <option value="94">90</option>
+                <option value="90">90</option>
                 <option value="100">100</option>
               </select>
             </div>
