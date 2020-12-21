@@ -11,6 +11,7 @@ class Dashboard extends Component {
     const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
     // Most common varietals
     let varietals = tastings.map(({ varietal }) => varietal);
+    let uniqueVarietals = varietals.filter((x, i, a) => a.indexOf(x) == i);
 
     return (
       <div className="dashboard">
@@ -19,15 +20,14 @@ class Dashboard extends Component {
           <div className="flex">
             <h3>Total TasteBuddy Sheets</h3>
             <p>
-              You've done <strong>{tastings.length}</strong> tasting
+              You've done <strong>{tastings.length}</strong> tastings
             </p>
             <h3>Your average score</h3>
             <p>
-              <strong>{avgScore}</strong> points UP
+              <strong>{Number(avgScore)}</strong> points UP
             </p>
             <h3>Common varietals</h3>
-            {}
-            <p>Malbec, Pinot Noir, Torrontes.</p>
+            <p>{uniqueVarietals.join(" ")}</p>
           </div>
         </section>
       </div>
