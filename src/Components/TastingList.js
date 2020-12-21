@@ -41,6 +41,7 @@ class TastingList extends Component {
 
   render() {
     const tastings = this.filterTastings();
+
     return (
       <section className="tasting-list">
         <h2>Viewing {this.context.tastings.length} wine tasting sheets</h2>
@@ -68,7 +69,11 @@ class TastingList extends Component {
           </section>
           <section className="vintage-filter">
             <label>Vintage:</label>
-            <select onChange={(e) => this.setFilter("vintage", e.target.value)}>
+            <select
+              onChange={(e) =>
+                this.setFilter("vintage", Number(e.target.value))
+              }
+            >
               <option value="all">All</option>
               {[...new Set(this.context.tastings.map((t) => t.vintage))]
                 .sort()
@@ -79,7 +84,9 @@ class TastingList extends Component {
           </section>
           <section className="score-filter">
             <label>Score:</label>
-            <select onChange={(e) => this.setFilter("score", e.target.value)}>
+            <select
+              onChange={(e) => this.setFilter("score", Number(e.target.value))}
+            >
               <option value="all">All</option>
               {[...new Set(this.context.tastings.map((t) => t.score))]
                 .sort()

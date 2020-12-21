@@ -4,8 +4,10 @@ import TokenService from "../services/token-service";
 import "./Nav.css";
 
 export default class Nav extends React.Component {
-  logout = () => {
+  logout = (e) => {
+    e.preventDefault();
     TokenService.clearAuthToken();
+    this.context.logout();
     this.props.history.push("/");
   };
 
@@ -22,15 +24,15 @@ export default class Nav extends React.Component {
             {TokenService.hasAuthToken() ? (
               <>
                 <li>
-                  <Link
-                    to="/login"
+                  <a
+                    href="/logout"
                     className="login"
                     aria-label="logout-button"
                     type="submit"
-                    onClick={() => this.logout}
+                    onClick={(e) => this.logout()}
                   >
                     <img src="/images/logout.png" alt="logout-icon" />
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <Link to="/tastings/add">+Tasting</Link>
