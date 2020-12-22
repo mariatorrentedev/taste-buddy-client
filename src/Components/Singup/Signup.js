@@ -1,5 +1,5 @@
 import React from "react";
-import AuthAPIService from "../services/auth-api-service";
+import AuthAPIService from "../../services/auth-api-service";
 
 export default class Signup extends React.Component {
   state = {

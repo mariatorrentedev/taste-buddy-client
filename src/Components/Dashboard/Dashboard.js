@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import Context from "../Context";
+import Context from "../../Context";
 
 class Dashboard extends Component {
   static contextType = Context;
-  state = {};
   render() {
     let { tastings = [] } = this.context;
-    // Average Score per user
+    // Avg score.
     let scores = tastings.map(({ score }) => score);
-    const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
-    // Most common varietals
+    const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length || 0;
+    // Most common varietals.
     let varietals = tastings.map(({ varietal }) => varietal);
-    let uniqueVarietals = varietals.filter((x, i, a) => a.indexOf(x) == i);
+    // Getting Non-repeat varietals.
+    let uniqueVarietals = varietals.filter((x, i, a) => a.indexOf(x) === i);
 
     return (
       <div className="dashboard">
@@ -27,7 +27,7 @@ class Dashboard extends Component {
               <strong>{Number(avgScore)}</strong> points UP
             </p>
             <h3>Common varietals</h3>
-            <p>{uniqueVarietals.join(" ")}</p>
+            <i>{uniqueVarietals.sort().join(", ")}</i>
           </div>
         </section>
       </div>

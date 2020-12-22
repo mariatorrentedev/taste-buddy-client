@@ -1,8 +1,7 @@
 import React from "react";
-import AuthAPIService from "../services/auth-api-service";
-import config from "../config";
-import TokenService from "../services/token-service";
-import Context from "../Context";
+import AuthAPIService from "../../services/auth-api-service";
+import TokenService from "../../services/token-service";
+import Context from "../../Context";
 
 export default class Login extends React.Component {
   static contextType = Context;
@@ -18,6 +17,7 @@ export default class Login extends React.Component {
     AuthAPIService.loginUser(user)
       .then((loginResponse) => {
         TokenService.saveAuthToken(loginResponse.authToken);
+        this.context.getTastings();
         this.props.history.push("/home");
       })
       .catch((res) => {

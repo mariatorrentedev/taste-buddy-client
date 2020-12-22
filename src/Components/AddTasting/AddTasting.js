@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import config from "../config";
-import Context from "../Context";
-import tokenService from "../services/token-service";
+import config from "../../config";
+import Context from "../../Context";
+import tokenService from "../../services/token-service";
 
 class AddTasting extends Component {
   static contextType = Context;

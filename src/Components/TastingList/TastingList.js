@@ -1,6 +1,6 @@
-import Context from "../Context";
+import Context from "../../Context";
 import React, { Component } from "react";
-import TastingItem from "./TastingItem";
+import TastingItem from "../TastingItem/TastingItem";
 
 class TastingList extends Component {
   static contextType = Context;
@@ -61,8 +61,10 @@ class TastingList extends Component {
             >
               <option value="all">All</option>
               {[...new Set(this.context.tastings.map((t) => t.varietal))].map(
-                (varietal) => (
-                  <option value={varietal}>{varietal}</option>
+                (varietal, i) => (
+                  <option key={i} value={varietal}>
+                    {varietal}
+                  </option>
                 )
               )}
             </select>
@@ -77,8 +79,10 @@ class TastingList extends Component {
               <option value="all">All</option>
               {[...new Set(this.context.tastings.map((t) => t.vintage))]
                 .sort()
-                .map((vintage) => (
-                  <option value={vintage}>{vintage}</option>
+                .map((vintage, i) => (
+                  <option key={i} value={vintage}>
+                    {vintage}
+                  </option>
                 ))}
             </select>
           </section>
@@ -90,8 +94,10 @@ class TastingList extends Component {
               <option value="all">All</option>
               {[...new Set(this.context.tastings.map((t) => t.score))]
                 .sort()
-                .map((score) => (
-                  <option value={score}>{score}</option>
+                .map((score, i) => (
+                  <option key={i} value={score}>
+                    {score}
+                  </option>
                 ))}
             </select>
           </section>

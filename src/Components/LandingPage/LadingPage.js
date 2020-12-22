@@ -1,7 +1,11 @@
 import React from "react";
+import TokenService from "../../services/token-service";
+import { Redirect } from "react-router-dom";
 
 function LandingPage() {
-  return (
+  return TokenService.hasAuthToken() ? (
+    <Redirect to="/home" />
+  ) : (
     <div className="landing-page">
       <section className="banner">
         <h2>Take your tasting experience to the next level!</h2>

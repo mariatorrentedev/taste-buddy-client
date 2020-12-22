@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Context from "../Context";
-import DeleteButton from "./DeleteButton";
+import Context from "../../Context";
+import DeleteButton from "../DeleteButton/DeleteButton";
 
 export default class TastingItem extends Component {
   static contextType = Context;
@@ -53,7 +53,7 @@ export default class TastingItem extends Component {
     } = this.props;
 
     return (
-      <li className="tasting-item" key="{tasting.id}">
+      <li className="tasting-item" key={this.props.id}>
         <div
           className="tasting-item-content"
           onClick={() => this.setState({ opened: !this.state.opened })}
@@ -70,9 +70,9 @@ export default class TastingItem extends Component {
               <div className="wine-sigth">
                 <p>{condition}</p>
                 <p>{concentration}</p>
-                <p>{colorred}</p>
-                <p>{colorwhite}</p>
-                <p>{colorrose}</p>
+                <p>{colorred || null}</p>
+                <p>{colorwhite || null}</p>
+                <p>{colorrose || null}</p>
                 <p>{rim}</p>
                 <p>{extract}</p>
                 <p>{tearing}</p>
@@ -82,15 +82,15 @@ export default class TastingItem extends Component {
                 <p>{conditionnose}</p>
                 <p>{intensity}</p>
                 <p>{ageassessment}</p>
-                <p>{fruitred}</p>
-                <p>{fruitwhite}</p>
-                <p>{fruitrose}</p>
+                <p>{fruitred || null}</p>
+                <p>{fruitwhite || null}</p>
+                <p>{fruitrose || null}</p>
               </div>
               <div className="wine-palate">
                 <p>{sweetness}</p>
-                <p>{fruitfred}</p>
-                <p>{fruitfwhite}</p>
-                <p>{fruitfrose}</p>
+                <p>{fruitfred || null}</p>
+                <p>{fruitfwhite || null}</p>
+                <p>{fruitfrose || null}</p>
                 <p>{nonfruit}</p>
                 <p>{earth}</p>
                 <p>{mineral}</p>
@@ -116,7 +116,11 @@ export default class TastingItem extends Component {
           <Link to={`/edittasting/${this.props.id}`}>
             <button className="edit-tasting">Edit</button>
           </Link>
-          <DeleteButton id={this.props.id} history={this.props.history} />
+          <DeleteButton
+            key={TastingItem}
+            id={this.props.id}
+            history={this.props.history}
+          />
         </div>
       </li>
     );

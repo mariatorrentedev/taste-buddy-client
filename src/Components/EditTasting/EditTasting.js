@@ -1,10 +1,19 @@
 import React, { Component } from "react";
-import config from "../config";
-import Context from "../Context";
-import tokenService from "../services/token-service";
+import config from "../../config";
+import Context from "../../Context";
+import tokenService from "../../services/token-service";
 
 class EditTasting extends Component {
   static contextType = Context;
+
+  static defaultProps = {
+    match: {
+      params: {
+        id: 0,
+      },
+    },
+  };
+
   state = {
     error: null,
     newTasting: {},
@@ -223,17 +232,19 @@ class EditTasting extends Component {
               <h3>Rim Variation</h3>
               <input
                 id="yes-rim"
-                value={newTasting.rim}
+                value="true"
                 name="rim"
                 type="radio"
+                checked={newTasting.rim === "true"}
                 onChange={(e) => this.handleChange(e)}
               />
               Yes
               <input
                 id="no-rim"
-                value={newTasting.rim}
+                value="false"
                 name="rim"
                 type="radio"
+                checked={newTasting.rim === "false"}
                 onChange={(e) => this.handleChange(e)}
               />
               No

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import config from "../config";
-import Context from "../Context";
-import tokenService from "../services/token-service";
+import config from "../../config";
+import Context from "../../Context";
+import tokenService from "../../services/token-service";
 
 export default class DeleteButton extends Component {
   static contextType = Context;
