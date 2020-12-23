@@ -58,7 +58,9 @@ export default class TastingItem extends Component {
           className="tasting-item-content"
           onClick={() => this.setState({ opened: !this.state.opened })}
         >
-          <h2 className="tasting-item-wineName">{winename}</h2>
+          <h2 className="winename">
+            {winename} - {score}
+          </h2>
           {this.state.opened && (
             <section className="tasting-item-expanded">
               <div className="wine-profile">
@@ -70,9 +72,9 @@ export default class TastingItem extends Component {
               <div className="wine-sigth">
                 <p>{condition}</p>
                 <p>{concentration}</p>
-                <p>{colorred || null}</p>
-                <p>{colorwhite || null}</p>
-                <p>{colorrose || null}</p>
+                <p>{colorred || ""}</p>
+                <p>{colorwhite || ""}</p>
+                <p>{colorrose || ""}</p>
                 <p>{rim}</p>
                 <p>{extract}</p>
                 <p>{tearing}</p>
@@ -82,15 +84,15 @@ export default class TastingItem extends Component {
                 <p>{conditionnose}</p>
                 <p>{intensity}</p>
                 <p>{ageassessment}</p>
-                <p>{fruitred || null}</p>
-                <p>{fruitwhite || null}</p>
-                <p>{fruitrose || null}</p>
+                <p>{fruitred || ""}</p>
+                <p>{fruitwhite || ""}</p>
+                <p>{fruitrose || ""}</p>
               </div>
               <div className="wine-palate">
                 <p>{sweetness}</p>
-                <p>{fruitfred || null}</p>
-                <p>{fruitfwhite || null}</p>
-                <p>{fruitfrose || null}</p>
+                <p>{fruitfred || ""}</p>
+                <p>{fruitfwhite || ""}</p>
+                <p>{fruitfrose || ""}</p>
                 <p>{nonfruit}</p>
                 <p>{earth}</p>
                 <p>{mineral}</p>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import config from "../../config";
 import Context from "../../Context";
 import tokenService from "../../services/token-service";
+import "./AddTasting.css";
 
 class AddTasting extends Component {
   static contextType = Context;
@@ -52,7 +53,7 @@ class AddTasting extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div>
+      <div className="form-main">
         <h2>DEDUCTIVE FORMAT</h2>
         <form
           className="add-tasting"
@@ -60,71 +61,74 @@ class AddTasting extends Component {
           onSubmit={(e) => this.handleSubmit(e)}
         >
           {error && <p className="error">{error}</p>}
-          <div className="winename">
-            <label htmlFor="winename" aria-label="winename">
-              Name:
-            </label>
-            <input
-              placeholder="eg. Yacochuya"
-              type="text"
-              id="winename"
-              defaultValue="Amarone Della Valpolicella"
-              name="winename"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="producer">
-            <label htmlFor="producer" aria-label="producer">
-              Producer:
-            </label>
-            <input
-              placeholder="eg.The Etcharts"
-              type="text"
-              id="producer"
-              defaultValue="Allegrini"
-              name="producer"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="varietal">
-            <label htmlFor="varietal" aria-label="varietal">
-              Varietal:
-            </label>
-            <input
-              placeholder="eg.Malbec"
-              type="text"
-              id="varietal"
-              name="varietal"
-              defaultValue="Corvina"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="vintage">
-            <label htmlFor="vintage" aria-label="vintage">
-              Vintage:
-            </label>
-            <input
-              placeholder="eg.2017"
-              type="number"
-              id="vintage"
-              name="vintage"
-              defaultValue="2015"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="region">
-            <label htmlFor="region" aria-label="region">
-              Region:
-            </label>
-            <input
-              placeholder="eg.Salta's Cafayete valle"
-              type="text"
-              id="region"
-              name="region"
-              defaultValue="Veneto"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
+          <fieldset>
+            <legend>Profile</legend>
+            <div className="winename">
+              <label htmlFor="winename" aria-label="winename">
+                Name:
+              </label>
+              <input
+                placeholder="eg. Yacochuya"
+                type="text"
+                id="winename"
+                defaultValue="Amarone Della Valpolicella"
+                name="winename"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="producer">
+              <label htmlFor="producer" aria-label="producer">
+                Producer:
+              </label>
+              <input
+                placeholder="eg.The Etcharts"
+                type="text"
+                id="producer"
+                defaultValue="Allegrini"
+                name="producer"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="varietal">
+              <label htmlFor="varietal" aria-label="varietal">
+                Varietal:
+              </label>
+              <input
+                placeholder="eg.Malbec"
+                type="text"
+                id="varietal"
+                name="varietal"
+                defaultValue="Corvina"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="vintage">
+              <label htmlFor="vintage" aria-label="vintage">
+                Vintage:
+              </label>
+              <input
+                placeholder="eg.2017"
+                type="number"
+                id="vintage"
+                name="vintage"
+                defaultValue="2015"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="region">
+              <label htmlFor="region" aria-label="region">
+                Region:
+              </label>
+              <input
+                placeholder="eg.Salta's Cafayete valle"
+                type="text"
+                id="region"
+                name="region"
+                defaultValue="Veneto"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+          </fieldset>
           <fieldset>
             <legend>Sigh</legend>
             <div className="condition">
@@ -582,6 +586,7 @@ class AddTasting extends Component {
                 Tannins:
               </label>
               <select name="tannins" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
                 <option value="medium">Medium</option>
@@ -594,6 +599,7 @@ class AddTasting extends Component {
                 Acidity:
               </label>
               <select name="acidity" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
                 <option value="medium">Medium</option>
@@ -606,6 +612,7 @@ class AddTasting extends Component {
                 Alcohol:
               </label>
               <select name="alcohol" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
                 <option value="medium">Medium</option>
@@ -618,6 +625,7 @@ class AddTasting extends Component {
                 Complexity:
               </label>
               <select name="complexity" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
                 <option value="medium">Medium</option>
@@ -630,6 +638,7 @@ class AddTasting extends Component {
                 Length:
               </label>
               <select name="length" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="short">Short</option>
                 <option value="med-">Med-</option>
                 <option value="medium">Medium</option>
@@ -642,6 +651,7 @@ class AddTasting extends Component {
                 Body:
               </label>
               <select name="body" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="ligth">Ligth</option>
                 <option value="medium">Medium</option>
                 <option value="full">Full</option>
@@ -652,6 +662,7 @@ class AddTasting extends Component {
                 Texture:
               </label>
               <select name="texture" onChange={(e) => this.handleChange(e)}>
+                <option value="">Select...</option>
                 <option value="creamy">Creamy</option>
                 <option value="round">Round</option>
                 <option value="lean">Lean</option>
@@ -753,10 +764,12 @@ class AddTasting extends Component {
                 <option value="100">100</option>
               </select>
             </div>
+            <div>
+              <a type="click" onClick={this.handleClickCancel}>
+                X
+              </a>
+            </div>
           </fieldset>
-          <button type="button" onClick={this.handleClickCancel}>
-            Cancel
-          </button>
           <button type="submit">Add Tasting</button>
         </form>
       </div>
