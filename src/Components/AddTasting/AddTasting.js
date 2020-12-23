@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import config from "../../config";
 import Context from "../../Context";
 import tokenService from "../../services/token-service";
-import "./AddTasting.css";
 
 class AddTasting extends Component {
   static contextType = Context;
@@ -746,7 +745,7 @@ class AddTasting extends Component {
               id="comments"
               name="comments"
               rows="5"
-              cols="70"
+              cols="50"
               onChange={(e) => this.handleChange(e)}
               placeholder="Spectacular wine from Salta. Deep red. Complex, red and ripe fruits..."
             ></textarea>
@@ -764,12 +763,10 @@ class AddTasting extends Component {
                 <option value="100">100</option>
               </select>
             </div>
-            <div>
-              <a type="click" onClick={this.handleClickCancel}>
-                X
-              </a>
-            </div>
           </fieldset>
+          <button type="submit" onClick={this.handleClickCancel}>
+            Cancel
+          </button>
           <button type="submit">Add Tasting</button>
         </form>
       </div>

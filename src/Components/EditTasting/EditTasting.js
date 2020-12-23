@@ -851,7 +851,7 @@ class EditTasting extends Component {
               id="comments"
               name="comments"
               rows="5"
-              cols="70"
+              cols="50"
               value={newTasting.comments}
               onChange={(e) => this.handleChange(e)}
               placeholder="Spectacular wine from Salta. Deep red. Complex, red and ripe fruits..."

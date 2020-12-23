@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Context from "../../Context";
 import DeleteButton from "../DeleteButton/DeleteButton";
+import "../../App/App.css";
 
 export default class TastingItem extends Component {
   static contextType = Context;
@@ -55,12 +56,14 @@ export default class TastingItem extends Component {
     return (
       <li className="tasting-item" key={this.props.id}>
         <div
-          className="tasting-item-content"
+          className="tastinng-item-content"
           onClick={() => this.setState({ opened: !this.state.opened })}
         >
-          <h2 className="winename">
-            {winename} - {score}
-          </h2>
+          <section className="unexpanded">
+            <h2 className="winename">
+              {winename} - {score}
+            </h2>
+          </section>
           {this.state.opened && (
             <section className="tasting-item-expanded">
               <div className="wine-profile">
@@ -111,18 +114,18 @@ export default class TastingItem extends Component {
                 <p>{comments}</p>
                 <p>{score}</p>
               </div>
+              <div className="tasting-item-buttons">
+                <Link to={`/edittasting/${this.props.id}`}>
+                  <button className="edit-tasting">Edit</button>
+                </Link>
+                <DeleteButton
+                  key={TastingItem}
+                  id={this.props.id}
+                  history={this.props.history}
+                />
+              </div>
             </section>
           )}
-        </div>
-        <div className="tasting-item-buttons">
-          <Link to={`/edittasting/${this.props.id}`}>
-            <button className="edit-tasting">Edit</button>
-          </Link>
-          <DeleteButton
-            key={TastingItem}
-            id={this.props.id}
-            history={this.props.history}
-          />
         </div>
       </li>
     );

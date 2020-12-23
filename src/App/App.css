@@ -1,0 +1,37 @@
+.tasting-item {
+  list-style: none;
+}
+.unexpanded,
+button {
+  background-color: rgb(68, 0, 0);
+  box-shadow: 0 5px 3px black;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.unexpanded:hover {
+  background-color: brown;
+  text-shadow: -1px 0 #723333, 0 2px#723333, 2px 0#723333, 0 -1px#723333;
+}
+.tasting-item-buttons {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: rgb(85, 85, 84);
+  width: 150px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: black;
+}
+
+.input-search,
+.varietal-filter,
+.vintage-filter,
+.score-filter {
+  justify-content: center;
+  margin-bottom: 20px;
+}

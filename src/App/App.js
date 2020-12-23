@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import config from "./config";
-import Nav from "./Components/Nav/Nav";
-import Login from "./Components/Login/Login";
-import Signup from "./Components/Singup/Signup";
-import LandingPage from "./Components/LandingPage/LadingPage";
-import AddTasting from "./Components/AddTasting/AddTasting";
-import Home from "./Components/Home/Home";
-import Dashboard from "./Components/Dashboard/Dashboard";
-import TastingList from "./Components/TastingList/TastingList";
-import Context from "./Context";
-import EditTasting from "./Components/EditTasting/EditTasting";
-import PrivateRoute from "./Utils/PrivateRoute";
-import tokenService from "./services/token-service";
+import config from "../config";
+import Nav from "../Components/Nav/Nav";
+import Login from "../Components/Login/Login";
+import Signup from "../Components/Singup/Signup";
+import LandingPage from "../Components/LandingPage/LadingPage";
+import AddTasting from "../Components/AddTasting/AddTasting";
+import Home from "../Components/Home/Home";
+import Dashboard from "../Components/Dashboard/Dashboard";
+import TastingList from "../Components/TastingList/TastingList";
+import Context from "../Context";
+import EditTasting from "../Components/EditTasting/EditTasting";
+import PrivateRoute from "../Utils/PrivateRoute";
+import tokenService from "../services/token-service";
 
 class App extends Component {
   state = {
@@ -23,11 +23,6 @@ class App extends Component {
       this.setState({
         tastings,
         error: null,
-      });
-    },
-    deleteTasting: (id) => {
-      this.setState({
-        tastings: this.state.tastings.filter((tasting) => tasting.id !== id),
       });
     },
     addTasting: (newTasting) => {
@@ -43,6 +38,11 @@ class App extends Component {
           }
           return t;
         }),
+      });
+    },
+    deleteTasting: (id) => {
+      this.setState({
+        tastings: this.state.tastings.filter((tasting) => tasting.id !== id),
       });
     },
     getTastings: () => {
