@@ -79,72 +79,75 @@ class EditTasting extends Component {
           onSubmit={(e) => this.handleSubmit(e)}
         >
           {error && <p className="error">{error}</p>}
-          <div className="winename">
-            <label htmlFor="winename" aria-label="winename">
-              Name:
-            </label>
-            <input
-              placeholder="eg. Yacochuya"
-              type="text"
-              id="winename"
-              value={newTasting.winename}
-              name="winename"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="producer">
-            <label htmlFor="producer" aria-label="producer">
-              Producer:
-            </label>
-            <input
-              placeholder="eg.The Etcharts"
-              type="text"
-              id="producer"
-              value={newTasting.producer}
-              name="producer"
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="varietal">
-            <label htmlFor="varietal" aria-label="varietal">
-              Varietal:
-            </label>
-            <input
-              placeholder="eg.Malbec"
-              type="text"
-              id="varietal"
-              name="varietal"
-              value={newTasting.varietal}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="vintage">
-            <label htmlFor="vintage" aria-label="vintage">
-              Vintage:
-            </label>
-            <input
-              placeholder="eg.2017"
-              type="number"
-              id="vintage"
-              name="vintage"
-              value={newTasting.vintage}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
-          <div className="region">
-            <label htmlFor="region" aria-label="region">
-              Region:
-            </label>
-            <input
-              placeholder="eg.Salta's Cafayete valle"
-              type="text"
-              id="region"
-              name="region"
-              defaultValue="Veneto"
-              value={newTasting.region}
-              onChange={(e) => this.handleChange(e)}
-            />
-          </div>
+          <fieldset>
+            <legend>Profile</legend>
+            <div className="winename">
+              <label htmlFor="winename" aria-label="winename">
+                Name:
+              </label>
+              <input
+                placeholder="eg. Yacochuya"
+                type="text"
+                id="winename"
+                value={newTasting.winename}
+                name="winename"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="producer">
+              <label htmlFor="producer" aria-label="producer">
+                Producer:
+              </label>
+              <input
+                placeholder="eg.The Etcharts"
+                type="text"
+                id="producer"
+                value={newTasting.producer}
+                name="producer"
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="varietal">
+              <label htmlFor="varietal" aria-label="varietal">
+                Varietal:
+              </label>
+              <input
+                placeholder="eg.Malbec"
+                type="text"
+                id="varietal"
+                name="varietal"
+                value={newTasting.varietal}
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="vintage">
+              <label htmlFor="vintage" aria-label="vintage">
+                Vintage:
+              </label>
+              <input
+                placeholder="eg.2017"
+                type="number"
+                id="vintage"
+                name="vintage"
+                value={newTasting.vintage}
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+            <div className="region">
+              <label htmlFor="region" aria-label="region">
+                Region:
+              </label>
+              <input
+                placeholder="eg.Salta's Cafayete valle"
+                type="text"
+                id="region"
+                name="region"
+                defaultValue="Veneto"
+                value={newTasting.region}
+                onChange={(e) => this.handleChange(e)}
+              />
+            </div>
+          </fieldset>
           <fieldset>
             <legend>Sigh</legend>
             <div className="condition">

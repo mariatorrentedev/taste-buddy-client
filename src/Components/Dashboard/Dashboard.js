@@ -14,23 +14,21 @@ class Dashboard extends Component {
     let uniqueVarietals = varietals.filter((x, i, a) => a.indexOf(x) === i);
 
     return (
-      <div className="dashboard">
-        <section>
-          <h2>TasteBuddy Summary</h2>
-          <div className="flex">
-            <h3>Total TasteBuddy Sheets</h3>
-            <p>
-              You've done <strong>{tastings.length}</strong> tastings
-            </p>
-            <h3>Your average score</h3>
-            <p>
-              <strong>{Number(avgScore)}</strong> points UP
-            </p>
-            <h3>Common varietals</h3>
-            <i>{uniqueVarietals.sort().join(", ")}</i>
-          </div>
-        </section>
-      </div>
+      <section className="dashboard">
+        <h2>TasteBuddy Summary</h2>
+        <div className="flex">
+          <h3>Total TasteBuddy Sheets</h3>
+          <p>
+            You've done <strong>{tastings.length}</strong> tastings
+          </p>
+          <h3>Your average score</h3>
+          <p>
+            <strong>{Number(avgScore)}</strong> points UP
+          </p>
+          <h3>Common varietals</h3>
+          <i>{uniqueVarietals.sort().join(", ")}</i>
+        </div>
+      </section>
     );
   }
 }

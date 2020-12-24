@@ -60,19 +60,19 @@ export default class TastingItem extends Component {
           onClick={() => this.setState({ opened: !this.state.opened })}
         >
           <section className="unexpanded">
-            <h2 className="winename">
-              {winename} - {score}
-            </h2>
+            <h2 className="winename">{winename}</h2>
           </section>
           {this.state.opened && (
             <section className="tasting-item-expanded">
               <div className="wine-profile">
+                <h3 className="sense">Wine Profile</h3>
                 <p>{varietal}</p>
                 <p>{producer}</p>
                 <p>{vintage}</p>
                 <p>{region}</p>
               </div>
               <div className="wine-sigth">
+                <h3 className="sense">Sigth</h3>
                 <p>{condition}</p>
                 <p>{concentration}</p>
                 <p>{colorred || ""}</p>
@@ -84,6 +84,7 @@ export default class TastingItem extends Component {
                 <p>{gas}</p>
               </div>
               <div className="wine-nose">
+                <h3 className="sense">Nose</h3>
                 <p>{conditionnose}</p>
                 <p>{intensity}</p>
                 <p>{ageassessment}</p>
@@ -92,6 +93,7 @@ export default class TastingItem extends Component {
                 <p>{fruitrose || ""}</p>
               </div>
               <div className="wine-palate">
+                <h3 className="sense">Palate</h3>
                 <p>{sweetness}</p>
                 <p>{fruitfred || ""}</p>
                 <p>{fruitfwhite || ""}</p>
@@ -107,7 +109,8 @@ export default class TastingItem extends Component {
                 <p>{body}</p>
                 <p>{texture}</p>
               </div>
-              <div className="conclusion">
+              <div className="wine-comments">
+                <h3 className="sense">Conclusion</h3>
                 <p>{woodage}</p>
                 <p>{woodorigin}</p>
                 <p>{woodsize}</p>

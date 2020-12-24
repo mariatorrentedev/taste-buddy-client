@@ -7,7 +7,7 @@ function LandingPage() {
     <Redirect to="/home" />
   ) : (
     <div className="landing-page">
-      <section className="banner">
+      <section>
         <h2>Take your tasting experience to the next level!</h2>
         <p>
           TasteBuddy is the perfect place to create, save, edit & delete your
@@ -18,6 +18,7 @@ function LandingPage() {
           your favorite wines!
         </p>
       </section>
+      <div className="banner"></div>
       <section>
         <h3>Awaken your senses!</h3>
         <p>
@@ -28,6 +29,7 @@ function LandingPage() {
           you explore and live an entire organoleptic experience.
         </p>
       </section>
+
       <section>
         <h3>Taste from a professional pespective!</h3>
         <p>

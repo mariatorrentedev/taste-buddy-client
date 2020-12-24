@@ -53,13 +53,13 @@ class TastingList extends Component {
             onChange={(e) => this.setFilter("winename", e.target.value)}
           ></input>
         </section>
-        <div className="all-filters">
+        <div className="filters">
           <section className="varietal-filter">
-            <label>Varietal:</label>
+            <img src="Images/varietal.png" alt="varietal" />
             <select
               onChange={(e) => this.setFilter("varietal", e.target.value)}
             >
-              <option value="all">All</option>
+              <option value="all">Varietals</option>
               {[...new Set(this.context.tastings.map((t) => t.varietal))].map(
                 (varietal, i) => (
                   <option key={i} value={varietal}>
@@ -70,13 +70,13 @@ class TastingList extends Component {
             </select>
           </section>
           <section className="vintage-filter">
-            <label>Vintage:</label>
+            <img src="Images/vintage.png" alt="vintage" />
             <select
               onChange={(e) =>
                 this.setFilter("vintage", Number(e.target.value))
               }
             >
-              <option value="all">All</option>
+              <option value="all">Vintages</option>
               {[...new Set(this.context.tastings.map((t) => t.vintage))]
                 .sort()
                 .map((vintage, i) => (
@@ -87,11 +87,11 @@ class TastingList extends Component {
             </select>
           </section>
           <section className="score-filter">
-            <label>Score:</label>
+            <img src="Images/score.png" alt="score" />
             <select
               onChange={(e) => this.setFilter("score", Number(e.target.value))}
             >
-              <option value="all">All</option>
+              <option value="all">Scores</option>
               {[...new Set(this.context.tastings.map((t) => t.score))]
                 .sort()
                 .map((score, i) => (

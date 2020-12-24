@@ -52,7 +52,7 @@ class AddTasting extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div className="form-main">
+      <section className="form">
         <h2>DEDUCTIVE FORMAT</h2>
         <form
           className="add-tasting"
@@ -64,7 +64,7 @@ class AddTasting extends Component {
             <legend>Profile</legend>
             <div className="winename">
               <label htmlFor="winename" aria-label="winename">
-                Name:
+                Name
               </label>
               <input
                 placeholder="eg. Yacochuya"
@@ -769,7 +769,7 @@ class AddTasting extends Component {
           </button>
           <button type="submit">Add Tasting</button>
         </form>
-      </div>
+      </section>
     );
   }
 }
