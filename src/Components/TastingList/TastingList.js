@@ -59,7 +59,7 @@ class TastingList extends Component {
             <select
               onChange={(e) => this.setFilter("varietal", e.target.value)}
             >
-              <option value="all">Varietals</option>
+              <option value="all">All Varietals</option>
               {[...new Set(this.context.tastings.map((t) => t.varietal))].map(
                 (varietal, i) => (
                   <option key={i} value={varietal}>
@@ -76,7 +76,7 @@ class TastingList extends Component {
                 this.setFilter("vintage", Number(e.target.value))
               }
             >
-              <option value="all">Vintages</option>
+              <option value="all">All Vintages</option>
               {[...new Set(this.context.tastings.map((t) => t.vintage))]
                 .sort()
                 .map((vintage, i) => (
@@ -91,7 +91,7 @@ class TastingList extends Component {
             <select
               onChange={(e) => this.setFilter("score", Number(e.target.value))}
             >
-              <option value="all">Scores</option>
+              <option value="all">All Scores</option>
               {[...new Set(this.context.tastings.map((t) => t.score))]
                 .sort()
                 .map((score, i) => (
@@ -102,6 +102,9 @@ class TastingList extends Component {
             </select>
           </section>
         </div>
+        <section className="conventions">
+          <h2>Conventions</h2>
+        </section>
         <ul className="ul-tasting-list" aria-live="polite">
           {tastings.map((tasting) => (
             <TastingItem

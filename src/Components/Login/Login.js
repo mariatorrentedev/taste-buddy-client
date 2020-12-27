@@ -28,9 +28,9 @@ export default class Login extends React.Component {
   render() {
     return (
       <section>
-        <h3>Login</h3>
+        <h3>Log In</h3>
         <form
-          className="form"
+          className="login-form"
           aria-label="login-form"
           onSubmit={this.handleLogin}
         >

@@ -38,7 +38,7 @@ export default class Signup extends React.Component {
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset>
             <div className="flex-wrap">
-              <label htmlFor="new-email">Email:</label>
+              <label htmlFor="new-email">Email</label>
               <input
                 type="email"
                 placeholder="email"

@@ -31,10 +31,18 @@ header nav ul li a,
 button {
   color: white;
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   justify-content: space-around;
 }
+header p {
+  margin: 4px;
+  font-size: 10px;
+  text-shadow: -1px 0 #000000, 0 3px#000000, 2px 0#3a3737, 0 -1px#504a4a;
+}
 
+header p:hover {
+  color: rgb(255, 208, 203);
+}
 button {
   color: black;
   border-radius: 20px;
@@ -48,7 +56,7 @@ header nav ul li:last-child {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 3px 25px;
   }
   header h1 {
     margin: 14px 0;

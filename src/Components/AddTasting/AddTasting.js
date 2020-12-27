@@ -73,6 +73,7 @@ class AddTasting extends Component {
                 defaultValue="Amarone Della Valpolicella"
                 name="winename"
                 onChange={(e) => this.handleChange(e)}
+                required
               />
             </div>
             <div className="producer">
@@ -86,6 +87,7 @@ class AddTasting extends Component {
                 defaultValue="Allegrini"
                 name="producer"
                 onChange={(e) => this.handleChange(e)}
+                required
               />
             </div>
             <div className="varietal">
@@ -99,6 +101,7 @@ class AddTasting extends Component {
                 name="varietal"
                 defaultValue="Corvina"
                 onChange={(e) => this.handleChange(e)}
+                required
               />
             </div>
             <div className="vintage">
@@ -112,6 +115,7 @@ class AddTasting extends Component {
                 name="vintage"
                 defaultValue="2015"
                 onChange={(e) => this.handleChange(e)}
+                required
               />
             </div>
             <div className="region">
@@ -125,6 +129,7 @@ class AddTasting extends Component {
                 name="region"
                 defaultValue="Veneto"
                 onChange={(e) => this.handleChange(e)}
+                required
               />
             </div>
           </fieldset>
@@ -134,7 +139,11 @@ class AddTasting extends Component {
               <label htmlFor="condition" aria-label="condition">
                 Condition:
               </label>
-              <select name="condition" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="condition"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="clear">Clear</option>
                 <option value="hazy">Hazy</option>
@@ -147,6 +156,7 @@ class AddTasting extends Component {
               </label>
               <select
                 name="concentration"
+                required
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
@@ -163,6 +173,7 @@ class AddTasting extends Component {
                 </label>
                 <select
                   name="colorwhite"
+                  required
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
@@ -220,7 +231,11 @@ class AddTasting extends Component {
               <label htmlFor="extract" aria-label="extract">
                 Extract/Staning:
               </label>
-              <select name="extract" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="extract"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="Ligth">Ligth </option>
                 <option value="Medium">Medium</option>
@@ -231,7 +246,11 @@ class AddTasting extends Component {
               <label htmlFor="tearing" aria-label="tearing">
                 Tearing:
               </label>
-              <select name="tearing" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="tearing"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="Ligth">Ligth </option>
                 <option value="Medium">Medium</option>
@@ -266,6 +285,7 @@ class AddTasting extends Component {
               </label>
               <select
                 name="conditionnose"
+                required
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
@@ -282,7 +302,11 @@ class AddTasting extends Component {
               <label htmlFor="intensity" aria-label="intensity">
                 Intensity:
               </label>
-              <select name="intensity" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="intensity"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="delicate">Delicate </option>
                 <option value="moderate">Moderate</option>
@@ -295,6 +319,7 @@ class AddTasting extends Component {
               </label>
               <select
                 name="ageassessment"
+                required
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
@@ -352,7 +377,11 @@ class AddTasting extends Component {
               <label htmlFor="sweetness" aria-label="sweetness">
                 Sweetness:
               </label>
-              <select name="sweetness" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="sweetness"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="bone-dry">Bone Dry</option>
                 <option value="dry">Dry</option>
@@ -584,7 +613,11 @@ class AddTasting extends Component {
               <label htmlFor="tannins" aria-label="tannins">
                 Tannins:
               </label>
-              <select name="tannins" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="tannins"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
@@ -597,7 +630,11 @@ class AddTasting extends Component {
               <label htmlFor="acidity" aria-label="acidity">
                 Acidity:
               </label>
-              <select name="acidity" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="acidity"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
@@ -610,7 +647,11 @@ class AddTasting extends Component {
               <label htmlFor="alcohol" aria-label="alcohol">
                 Alcohol:
               </label>
-              <select name="alcohol" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="alcohol"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
@@ -623,7 +664,11 @@ class AddTasting extends Component {
               <label htmlFor="complexity" aria-label="complexity">
                 Complexity:
               </label>
-              <select name="complexity" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="complexity"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="low">Low</option>
                 <option value="med-">Med-</option>
@@ -636,7 +681,11 @@ class AddTasting extends Component {
               <label htmlFor="length" aria-label="length">
                 Length:
               </label>
-              <select name="length" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="length"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="short">Short</option>
                 <option value="med-">Med-</option>
@@ -649,7 +698,11 @@ class AddTasting extends Component {
               <label htmlFor="body" aria-label="body">
                 Body:
               </label>
-              <select name="body" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="body"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="ligth">Ligth</option>
                 <option value="medium">Medium</option>
@@ -660,7 +713,11 @@ class AddTasting extends Component {
               <label htmlFor="texture" aria-label="texture">
                 Texture:
               </label>
-              <select name="texture" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="texture"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="creamy">Creamy</option>
                 <option value="round">Round</option>
@@ -753,7 +810,11 @@ class AddTasting extends Component {
               <label htmlFor="score" aria-label="score">
                 Score:
               </label>
-              <select name="score" onChange={(e) => this.handleChange(e)}>
+              <select
+                name="score"
+                required
+                onChange={(e) => this.handleChange(e)}
+              >
                 <option value="">Select...</option>
                 <option value="50">50 </option>
                 <option value="75">75 </option>
