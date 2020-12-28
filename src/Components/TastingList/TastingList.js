@@ -102,19 +102,19 @@ class TastingList extends Component {
             </select>
           </section>
         </div>
-        <section className="conventions">
-          <h2>Conventions</h2>
+        <section className="tastings">
+          <hr />
+          <ul className="ul-tasting-list" aria-live="polite">
+            {tastings.map((tasting) => (
+              <TastingItem
+                key={tasting.id}
+                {...tasting}
+                deleteTasting={this.context.deleteTasting}
+                {...this.props}
+              />
+            ))}
+          </ul>
         </section>
-        <ul className="ul-tasting-list" aria-live="polite">
-          {tastings.map((tasting) => (
-            <TastingItem
-              key={tasting.id}
-              {...tasting}
-              deleteTasting={this.context.deleteTasting}
-              {...this.props}
-            />
-          ))}
-        </ul>
       </section>
     );
   }

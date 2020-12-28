@@ -32,7 +32,14 @@ export default class DeleteButton extends Component {
   render() {
     return (
       <div className="DeleteBtn">
-        <button onClick={(e) => this.handleDelete(e)}>Delete</button>
+        <button
+          onClick={(e) => {
+            if (window.confirm("Are you sure you wish to delete this tasting?"))
+              this.handleDelete(e);
+          }}
+        >
+          Delete
+        </button>
       </div>
     );
   }

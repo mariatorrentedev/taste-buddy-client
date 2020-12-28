@@ -20,6 +20,28 @@ body {
 .tasting-item {
   list-style: none;
 }
+
+.tasting-list hr {
+  overflow: visible;
+  height: 30px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  margin: 15px;
+}
+
+.tasting-list hr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
 .unexpanded,
 button {
   background-color: rgb(68, 0, 0);
@@ -29,12 +51,6 @@ button {
   color: white;
   cursor: pointer;
 }
-.unexpanded:hover,
-button:hover {
-  background-color: rgb(126, 124, 124);
-  text-shadow: -1px 0 #020202, 0 3px#0c0b0b, 2px 0#1b1111, 0 -1px#000000;
-  border: 2px black;
-}
 .tasting-item-buttons {
   padding: 20px;
   display: flex;
@@ -43,7 +59,13 @@ button:hover {
 button {
   background-color: rgb(0, 0, 0);
   width: 150px;
-  margin: 10px;
+  margin: 5px;
+}
+.unexpanded:hover,
+button:hover {
+  background-color: rgb(126, 124, 124);
+  text-shadow: -1px 0 #020202, 0 3px#0c0b0b, 2px 0#1b1111, 0 -1px#000000;
+  border: 2px black;
 }
 
 .wine-profile,
@@ -93,11 +115,8 @@ form label {
 .tasting-list img {
   width: 100px;
 }
-.unexpanded img {
-  width: 30px;
-}
 
-/*filters */
+/*Controls*/
 input[type="text"],
 input[type="number"],
 input[type="email"],
@@ -141,6 +160,16 @@ fieldset {
 .score-filter {
   flex: 1;
   margin: 20px;
+}
+
+form h3 {
+  border-radius: 15px;
+  margin-top: 10px;
+  background-color: rgb(238, 217, 217);
+}
+
+form h3 {
+  color: black;
 }
 
 .banner {
