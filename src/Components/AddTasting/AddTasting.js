@@ -217,7 +217,7 @@ class AddTasting extends Component {
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
               />
-              Yes
+              True
               <input
                 id="rim"
                 value="false"
@@ -225,7 +225,7 @@ class AddTasting extends Component {
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
               />
-              No
+              False
             </div>
             <div className="extract">
               <label htmlFor="extract" aria-label="extract">
@@ -266,7 +266,7 @@ class AddTasting extends Component {
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
               />
-              Yes
+              True
               <input
                 id="gas"
                 value="false"
@@ -274,7 +274,7 @@ class AddTasting extends Component {
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
               />
-              No
+              False
             </div>
           </fieldset>
           <fieldset>

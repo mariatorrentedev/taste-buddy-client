@@ -191,7 +191,7 @@ class EditTasting extends Component {
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
-                  <option value="water white">Water White</option>
+                  <option value="water-white">Water White</option>
                   <option value="straw">Straw</option>
                   <option value="yellow">Yellow</option>
                   <option value="gold">Gold</option>
@@ -206,7 +206,7 @@ class EditTasting extends Component {
                   value={newTasting.colorred || ""}
                   onChange={(e) => this.handleChange(e)}
                 >
-                  <option value="0">Select...</option>
+                  <option value="">Select...</option>
                   <option value="purple">Purple</option>
                   <option value="ruby">Ruby</option>
                   <option value="red">Red</option>
@@ -222,7 +222,7 @@ class EditTasting extends Component {
                   value={newTasting.colorrose || ""}
                   onChange={(e) => this.handleChange(e)}
                 >
-                  <option value="0">Select...</option>
+                  <option value="">Select...</option>
                   <option value="ligth-pink">Ligth Pink</option>
                   <option value="ligth-orange">Ligth Orange</option>
                   <option value="tart-cherry">Tart Cherry</option>
@@ -260,7 +260,7 @@ class EditTasting extends Component {
                 value={newTasting.extract || ""}
                 onChange={(e) => this.handleChange(e)}
               >
-                <option value="0">Select...</option>
+                <option value="">Select...</option>
                 <option value="Ligth">Ligth </option>
                 <option value="Medium">Medium</option>
                 <option value="Heavy">Heavy</option>
@@ -275,7 +275,7 @@ class EditTasting extends Component {
                 value={newTasting.tearing || ""}
                 onChange={(e) => this.handleChange(e)}
               >
-                <option value="0">Select...</option>
+                <option value="">Select...</option>
                 <option value="Ligth">Ligth </option>
                 <option value="Medium">Medium</option>
                 <option value="Heavy">Heavy</option>
@@ -291,7 +291,7 @@ class EditTasting extends Component {
                 checked={newTasting.gas === "true"}
                 onChange={(e) => this.handleChange(e)}
               />
-              Yes
+              True
               <input
                 id="gas"
                 checked={newTasting.gas === "false"}
@@ -300,7 +300,7 @@ class EditTasting extends Component {
                 type="radio"
                 onChange={(e) => this.handleChange(e)}
               />
-              No
+              False
             </div>
           </fieldset>
           <fieldset>
@@ -314,7 +314,7 @@ class EditTasting extends Component {
                 value={newTasting.conditionnose || ""}
                 onChange={(e) => this.handleChange(e)}
               >
-                <option value="0">Select...</option>
+                <option value="">Select...</option>
                 <option value="clean">Clean</option>
                 <option value="tca">TCA</option>
                 <option value="h2s">H2S</option>
@@ -333,7 +333,7 @@ class EditTasting extends Component {
                 value={newTasting.intensity || ""}
                 onChange={(e) => this.handleChange(e)}
               >
-                <option value="0">Select...</option>
+                <option value="">Select...</option>
                 <option value="delicate">Delicate </option>
                 <option value="moderate">Moderate</option>
                 <option value="powerfull">Powerfull</option>

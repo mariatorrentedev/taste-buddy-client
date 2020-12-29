@@ -29,32 +29,40 @@ export default class Signup extends React.Component {
   render() {
     return (
       <section>
-        <h3>Start your TasteBuddy journey today!</h3>
         <form
-          className="form"
+          className="singup-form"
           aria-label="signup-form"
           onSubmit={this.handleSubmit}
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset>
+            <legend>Singup</legend>
+            <p>Start your TasteBuddy journey today!</p>
             <div className="flex-wrap">
               <label htmlFor="new-email">Email</label>
-              <input
-                type="email"
-                placeholder="email"
-                name="email"
-                id="new-email"
-              />
+              <div className="input-icons">
+                <i className="fa fa-envelope icon"></i>
+                <input
+                  type="email"
+                  placeholder="email"
+                  name="email"
+                  id="new-email"
+                />
+              </div>
             </div>
             <div className="flex-wrap">
               <label htmlFor="new-password">Password</label>
-              <input
-                id="new-password"
-                type="password"
-                placeholder="new password"
-                name="password"
-              />
+              <div className="input-icons">
+                <i className="fa fa-key icon"></i>
+                <input
+                  id="new-password"
+                  type="password"
+                  placeholder="new password"
+                  name="password"
+                />
+              </div>
               <label htmlFor="confirm-password">Confirm password</label>
+
               <input
                 id="confirm-password"
                 type="password"

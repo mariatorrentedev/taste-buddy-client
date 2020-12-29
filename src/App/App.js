@@ -88,6 +88,7 @@ class App extends Component {
             <PrivateRoute path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/tastings" component={TastingList} />
           </div>
+          <footer>Copyright © 2020 TasteBuddy</footer>
         </div>
       </Context.Provider>
     );

@@ -20,10 +20,7 @@ function LandingPage() {
       </section>
       <div className="banner"></div>
       <section>
-        <h3>Awaken your senses!</h3>
-        <p>
-          [<em>placeholder for screenshot of tasting sheet interface</em>]
-        </p>
+        <h2>Awaken your senses!</h2>
         <p>
           TasteBuddy teaches you how to carry out an effective tasting, making
           you explore and live an entire organoleptic experience.
@@ -31,14 +28,16 @@ function LandingPage() {
       </section>
 
       <section>
-        <h3>Taste from a professional pespective!</h3>
-        <p>
-          [<em>placeholder for screenshot of the deductive tasting grid.</em>]
-        </p>
+        <h2>Taste from a professional pespective!</h2>
         <p>
           Fill out your own deductive tasting format similar to the one that the
           Court of Master Sommeliers use in their studies.
         </p>
+        <div className="video-form">
+          <video width="400" height="300" controls>
+            <source src="/Videos/awaken-senses.mp4" type="video/mp4" />
+          </video>
+        </div>
       </section>
       <section>
         <h3>Master your technical knowledge!</h3>

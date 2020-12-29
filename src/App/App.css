@@ -21,6 +21,10 @@ body {
   list-style: none;
 }
 
+.tasting-list,
+.dashboard {
+  padding: 50px;
+}
 .tasting-list hr {
   overflow: visible;
   height: 30px;
@@ -140,6 +144,32 @@ select:hover {
   background-color: rgb(0, 0, 0);
   color: white;
 }
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 20px;
+  color: black;
+  min-width: 60px;
+}
+
+.conventions {
+  display: flex;
+  flex-direction: column;
+}
+.conv-item {
+  flex: 2;
+  margin: 20px;
+}
+.conv-item2 {
+  flex: 1;
+}
 textarea {
   cursor: auto;
 }
@@ -162,13 +192,12 @@ fieldset {
   margin: 20px;
 }
 
-form h3 {
+form h3,
+.singup-form p,
+.conventions h3 {
   border-radius: 15px;
   margin-top: 10px;
   background-color: rgb(238, 217, 217);
-}
-
-form h3 {
   color: black;
 }
 
@@ -182,7 +211,21 @@ form h3 {
 form .login-form {
   padding: 50px;
 }
-
+/*Home */
+.home section {
+  min-height: 200px;
+}
+.home section:nth-child(even),
+footer {
+  background-color: rgb(68, 0, 0);
+  color: white;
+}
+footer {
+  margin-top: 30px;
+  padding: 5px;
+  font-size: 13px;
+  box-shadow: 5px 0px 7px 5px black;
+}
 /*Destopk Style*/
 
 @media all and (min-width: 700px) {
@@ -191,5 +234,12 @@ form .login-form {
   }
   form {
     padding: 0 150px;
+  }
+  .video-form video {
+    width: 750px;
+    height: 500px;
+  }
+  .conventions {
+    flex-direction: row;
   }
 }

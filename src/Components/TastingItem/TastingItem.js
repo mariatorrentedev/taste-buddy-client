@@ -66,56 +66,127 @@ export default class TastingItem extends Component {
             <section className="tasting-item-expanded">
               <div className="wine-profile">
                 <h3 className="sense">Wine Profile</h3>
-                <p>{varietal}</p>
-                <p>{producer}</p>
-                <p>{vintage}</p>
-                <p>{region}</p>
+                <p>
+                  <i className="fas fa-seedling"></i>
+                  {varietal}
+                </p>
+                <p>
+                  <i className="fab fa-product-hunt"></i>
+                  {producer}
+                </p>
+                <p>
+                  <i className="fas fa-vote-yea"></i>
+                  {vintage}
+                </p>
+                <p>
+                  <i className="fas fa-globe-americas"></i> {region}
+                </p>
               </div>
               <div className="wine-sigth">
                 <h3 className="sense">Sigth</h3>
-                <p>{condition}</p>
-                <p>{concentration}</p>
-                <p>{colorred || ""}</p>
+                <p>
+                  <i className="fas fa-fan"></i>
+                  {condition}
+                </p>
+                <p>
+                  <i className="fas fa-adjust"></i>
+                  {concentration}
+                </p>
+                <p>
+                  <i className="fas fa-palette"></i>
+                  {colorred || ""}
+                </p>
                 <p>{colorwhite || ""}</p>
                 <p>{colorrose || ""}</p>
-                <p>{rim}</p>
-                <p>{extract}</p>
-                <p>{tearing}</p>
-                <p>{gas}</p>
+                <p>
+                  <i className="fas fa-wine-glass-alt"></i>
+                  {rim}
+                </p>
+                <p>
+                  <i className="fab fa-mixer"></i>
+                  {extract}
+                </p>
+                <p>
+                  <i className="fas fa-tint"></i>
+                  {tearing}
+                </p>
+                <p>
+                  <i className="fas fa-burn"></i>
+                  {gas}
+                </p>
               </div>
               <div className="wine-nose">
                 <h3 className="sense">Nose</h3>
-                <p>{conditionnose}</p>
-                <p>{intensity}</p>
-                <p>{ageassessment}</p>
-                <p>{fruitred || ""}</p>
+                <p>
+                  <i class="fas fa-hand-sparkles"></i> {conditionnose}
+                </p>
+                <p>
+                  <i className="fas fa-signal"></i> {intensity}
+                </p>
+                <p>
+                  <i className="fas fa-clock"> </i> {ageassessment}
+                </p>
+                <p>
+                  <i className="fab fa-apple"></i>
+                  {fruitred || ""}
+                </p>
                 <p>{fruitwhite || ""}</p>
                 <p>{fruitrose || ""}</p>
               </div>
               <div className="wine-palate">
                 <h3 className="sense">Palate</h3>
-                <p>{sweetness}</p>
-                <p>{fruitfred || ""}</p>
+                <p>
+                  <i className="fas fa-candy-cane" /> {sweetness}
+                </p>
+                <p>
+                  <i className="fas fa-lemon" />
+                  {fruitfred || ""}
+                </p>
                 <p>{fruitfwhite || ""}</p>
                 <p>{fruitfrose || ""}</p>
-                <p>{nonfruit}</p>
-                <p>{earth}</p>
-                <p>{mineral}</p>
-                <p>{tannins}</p>
-                <p>{acidity}</p>
-                <p>{alcohol}</p>
-                <p>{complexity}</p>
-                <p>{length}</p>
-                <p>{body}</p>
-                <p>{texture}</p>
+                <p>
+                  <i className="fas fa-pepper-hot" /> {nonfruit}
+                </p>
+                <p>
+                  <i className="fas fa-mountain" /> {earth}
+                </p>
+                <p>
+                  <i className="fas fa-spa" /> {mineral}
+                </p>
+                <p>
+                  <i className="fas fa-certificate" /> {tannins}
+                </p>
+                <p>
+                  <i className="far fa-lemon" /> {acidity}
+                </p>
+                <p>
+                  <i class="fas fa-wine-bottle" /> {alcohol}
+                </p>
+                <p>
+                  <i className="fab fa-creative-commons-remix" /> {complexity}
+                </p>
+                <p>
+                  <i className="fas fa-ruler" /> {length}
+                </p>
+                <p>
+                  <i className="fas fa-child" /> {body}
+                </p>
+                <p>
+                  <i className="fas fa-align-center" /> {texture}
+                </p>
               </div>
               <div className="wine-comments">
                 <h3 className="sense">Conclusion</h3>
-                <p>{woodage}</p>
-                <p>{woodorigin}</p>
-                <p>{woodsize}</p>
-                <p>{comments}</p>
-                <p>{score}</p>
+                <p>
+                  <i className="fas fa-tree" /> {woodage} | {woodorigin} |
+                  {woodsize}
+                </p>
+                <p>
+                  <i className="fas fa-pen-square" /> {comments}
+                </p>
+                <p>
+                  <i className="fas fa-star" /> {score}
+                </p>
               </div>
               <div className="tasting-item-buttons">
                 <Link to={`/edittasting/${this.props.id}`}>

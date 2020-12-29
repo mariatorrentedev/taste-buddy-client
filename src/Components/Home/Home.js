@@ -5,18 +5,16 @@ function Home() {
   return (
     <div className="home">
       <section>
-        <h2>Welcome TasteBuddy!</h2>
-        <p>Your wine tasting journey is about to begin...</p>
+        <h2>TasteBuddy Guide</h2>
+        <div className="video-form">
+          <video width="400" height="300" controls>
+            <source src="/Videos/taste-buddy-video.mp4" type="video/mp4" />
+          </video>
+        </div>
         <p>
           After reading and understanding this technical guide, you will be able
           to complete your first deductive tasting format
           <Link to="/tastings/add"> Here</Link>
-        </p>
-      </section>
-      <section>
-        <h2>TasteBud Guide</h2>
-        <p>
-          [<em>placeholder for an introductory video.</em>]
         </p>
       </section>
       <section>

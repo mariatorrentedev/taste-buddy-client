@@ -28,7 +28,6 @@ export default class Login extends React.Component {
   render() {
     return (
       <section>
-        <h3>Log In</h3>
         <form
           className="login-form"
           aria-label="login-form"
@@ -36,31 +35,37 @@ export default class Login extends React.Component {
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset aria-label="email">
+            <legend>Login</legend>
             <div className="flex-wrap">
               <label className="login-email" htmlFor="email">
                 Email
               </label>
-              <input
-                type="email"
-                placeholder="email"
-                id="email"
-                name="email"
-                onChange={(e) => console.log(e)}
-              />
+              <div className="input-icons">
+                <i className="fa fa-envelope icon"></i>
+                <input
+                  type="email"
+                  placeholder="email"
+                  id="email"
+                  name="email"
+                  onChange={(e) => console.log(e)}
+                />
+              </div>
             </div>
             <div className="flex-wrap">
               <label htmlFor="password" className="login-pw">
                 Password
               </label>
-              <input
-                id="password"
-                type="password"
-                placeholder="password"
-                name="password"
-                onChange={(e) => console.log(e)}
-              />
+              <div className="input-icons">
+                <i className="fa fa-key icon"></i>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="password"
+                  name="password"
+                  onChange={(e) => console.log(e)}
+                />
+              </div>
             </div>
-
             <button className="login" type="submit" aria-label="login">
               Login
             </button>

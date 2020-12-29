@@ -102,6 +102,140 @@ class TastingList extends Component {
             </select>
           </section>
         </div>
+        <section className="conventions">
+          <fieldset className="conv-item">
+            <legend>Conventions</legend>
+            <h3>PROFILE</h3>
+            <p>
+              <i className="fa fa-wine-glass" /> Wine Name
+            </p>
+            <p>
+              <i className="fas fa-seedling" />
+              Varietal
+            </p>
+            <p>
+              <i className="fab fa-product-hunt" /> Producer
+            </p>
+            <p>
+              <i className="fas fa-vote-yea" /> Vintage
+            </p>
+            <p>
+              <i className="fas fa-globe-americas" /> Region
+            </p>
+            <h3>SIGTH</h3>
+            <p>
+              <i className="fas fa-fan" /> Condition
+            </p>
+            <p>
+              <i className="fas fa-adjust" /> Concentration
+            </p>
+            <p>
+              <i className="fas fa-palette" /> Color
+            </p>
+            <p>
+              <i className="fas fa-wine-glass-alt" /> Rim Variation
+            </p>
+            <p>
+              <i className="fab fa-mixer" /> Extract
+            </p>
+            <p>
+              <i className="fas fa-tint" /> Tearing
+            </p>
+            <p>
+              <i className="fas fa-burn" />
+              Gas
+            </p>
+            <h3>NOSE</h3>
+            <p>
+              <i className="fas fa-hand-sparkles" /> Condition
+            </p>
+            <p>
+              <i className="fas fa-signal" /> Intensity
+            </p>
+            <p>
+              <i className="fas fa-clock" /> Age Assessment
+            </p>
+            <p>
+              <i className="fab fa-apple" /> Fruit Aromas
+            </p>
+            <h3>PALATE</h3>
+            <p>
+              <i className="fas fa-candy-cane" /> Sweetness
+            </p>
+            <p>
+              <i className="fas fa-lemon" /> Fruit Flavours
+            </p>
+            <p>
+              <i className="fas fa-pepper-hot" /> Non-Fruit
+            </p>
+            <p>
+              <i class="fas fa-mountain" /> Earth
+            </p>
+            <p>
+              <i className="fas fa-spa" /> Mineral
+            </p>
+            <p>
+              <i className="fas fa-certificate" /> Tannins
+            </p>
+            <p>
+              <i className="far fa-lemon" /> Acidity
+            </p>
+            <p>
+              <i className="fas fa-wine-bottle" /> Alcohol
+            </p>
+            <p>
+              <i className="fab fa-creative-commons-remix" /> Complexity
+            </p>
+            <p>
+              <i className="fas fa-ruler" /> Length
+            </p>
+            <p>
+              <i className="fas fa-child" /> Body
+            </p>
+            <p>
+              <i className="fas fa-align-center" /> Texture
+            </p>
+            <h3>CONCLUSION</h3>
+            <p>
+              <i className="fas fa-tree" /> Wood
+            </p>
+            <p>
+              <i className="fas fa-pen-square" /> Comments
+            </p>
+            <p>
+              <i className="fas fa-star" /> Score
+            </p>
+          </fieldset>
+          <fieldset className="conv-item2">
+            <legend>Scores</legend>
+            <h3>50</h3>
+            <p>
+              <strong>Not Recommended</strong>
+            </p>
+            <h3>75</h3>
+            <p>
+              <strong>Mediocre:</strong> a drinkable wine that may have minor
+              flaws.
+            </p>
+            <h3>80</h3>
+            <p>
+              <strong>Good:</strong> a solid, well-made wine.
+            </p>
+            <h3>85</h3>
+            <p>
+              <strong>Very good:</strong> a wine with special qualities.
+            </p>
+            <h3>90</h3>
+            <p>
+              <strong>Outstanding:</strong> a wine of superior character and
+              style.
+            </p>
+            <h3>100</h3>
+            <p>
+              <strong>Classic:</strong> a great quality wine.
+            </p>
+          </fieldset>
+        </section>
         <section className="tastings">
           <hr />
           <ul className="ul-tasting-list" aria-live="polite">
