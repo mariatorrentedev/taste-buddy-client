@@ -100,7 +100,7 @@ export default class TastingItem extends Component {
                 <p>{colorrose || ""}</p>
                 <p>
                   <i className="fas fa-wine-glass-alt"></i>
-                  {rim}
+                  {rim.toString()}
                 </p>
                 <p>
                   <i className="fab fa-mixer"></i>
@@ -112,7 +112,7 @@ export default class TastingItem extends Component {
                 </p>
                 <p>
                   <i className="fas fa-burn"></i>
-                  {gas}
+                  {gas.toString()}
                 </p>
               </div>
               <div className="wine-nose">

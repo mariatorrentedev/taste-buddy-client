@@ -20,6 +20,7 @@ class EditTasting extends Component {
   };
 
   handleChange(e) {
+    console.log(e.target.value);
     this.setState({
       newTasting: { ...this.state.newTasting, [e.target.name]: e.target.value },
     });
@@ -237,19 +238,19 @@ class EditTasting extends Component {
                 value="true"
                 name="rim"
                 type="radio"
-                checked={newTasting.rim === "true"}
+                checked={newTasting.rim}
                 onChange={(e) => this.handleChange(e)}
               />
-              Yes
+              True
               <input
                 id="rim"
-                value="false"
                 name="rim"
+                value="false"
                 type="radio"
-                checked={newTasting.rim === "false"}
+                checked={!newTasting.rim}
                 onChange={(e) => this.handleChange(e)}
               />
-              No
+              False
             </div>
             <div className="extract">
               <label htmlFor="extract" aria-label="extract">
@@ -288,13 +289,13 @@ class EditTasting extends Component {
                 value="true"
                 name="gas"
                 type="radio"
-                checked={newTasting.gas === "true"}
+                checked={newTasting.gas}
                 onChange={(e) => this.handleChange(e)}
               />
               True
               <input
                 id="gas"
-                checked={newTasting.gas === "false"}
+                checked={!newTasting.gas}
                 value="false"
                 name="gas"
                 type="radio"
