@@ -169,7 +169,7 @@ class TastingList extends Component {
               <i className="fas fa-pepper-hot" /> Non-Fruit
             </p>
             <p>
-              <i class="fas fa-mountain" /> Earth
+              <i className="fas fa-mountain" /> Earth
             </p>
             <p>
               <i className="fas fa-spa" /> Mineral

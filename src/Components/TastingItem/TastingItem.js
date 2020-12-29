@@ -118,7 +118,7 @@ export default class TastingItem extends Component {
               <div className="wine-nose">
                 <h3 className="sense">Nose</h3>
                 <p>
-                  <i class="fas fa-hand-sparkles"></i> {conditionnose}
+                  <i className="fas fa-hand-sparkles"></i> {conditionnose}
                 </p>
                 <p>
                   <i className="fas fa-signal"></i> {intensity}
@@ -160,7 +160,7 @@ export default class TastingItem extends Component {
                   <i className="far fa-lemon" /> {acidity}
                 </p>
                 <p>
-                  <i class="fas fa-wine-bottle" /> {alcohol}
+                  <i className="fas fa-wine-bottle" /> {alcohol}
                 </p>
                 <p>
                   <i className="fab fa-creative-commons-remix" /> {complexity}

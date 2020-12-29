@@ -23,12 +23,13 @@ header nav ul {
   display: flex;
   list-style: none;
 }
+
 section h1,
 header nav ul li a,
 button {
   color: white;
   text-decoration: none;
-  margin-right: 15px;
+  margin-right: 25px;
   justify-content: space-around;
 }
 header p {
@@ -60,5 +61,8 @@ button {
   }
   header nav {
     margin-top: 10px;
+  }
+  ul li {
+    margin: 0 15px;
   }
 }

@@ -7,10 +7,30 @@ function Home() {
       <section>
         <h2>TasteBuddy Guide</h2>
         <div className="video-form">
-          <video width="400" height="300" controls>
+          <video width="360" height="300" controls>
             <source src="/Videos/taste-buddy-video.mp4" type="video/mp4" />
           </video>
         </div>
+      </section>
+      <section>
+        <h2>Things to keep in mind before starting the tasting</h2>
+        <ul>
+          <li>
+            Prepare your enviroment, don't wear perfume, and try to choose a
+            natural light room.
+          </li>
+          <li>Try not to have coffee, eat spicy food, garlic or onion.</li>
+          <li>
+            Tasting Order: white wines before red wines, ligther wines before
+            heavier, and sweet wines for the end.
+          </li>
+          <li>
+            <strong>Ideal temperature: 18°-20°C </strong>take out the wines and
+            keep them between 2-3 hours at room temperature. YES, ALL! even the
+            white wines. It would have the correct volatility to identify
+            aromas.
+          </li>
+        </ul>
         <p>
           After reading and understanding this technical guide, you will be able
           to complete your first deductive tasting format

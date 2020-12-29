@@ -228,7 +228,7 @@ footer {
 }
 /*Destopk Style*/
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 650px) {
   .filters {
     flex-direction: row;
   }
