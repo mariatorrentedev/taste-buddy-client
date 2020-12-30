@@ -102,6 +102,20 @@ class TastingList extends Component {
             </select>
           </section>
         </div>
+        <section className="tastings">
+          <hr />
+          <ul className="ul-tasting-list" aria-live="polite">
+            {tastings.map((tasting) => (
+              <TastingItem
+                key={tasting.id}
+                {...tasting}
+                deleteTasting={this.context.deleteTasting}
+                {...this.props}
+              />
+            ))}
+          </ul>
+        </section>
+        <hr />
         <section className="conventions">
           <fieldset className="conv-item">
             <legend>Conventions</legend>
@@ -235,19 +249,6 @@ class TastingList extends Component {
               <strong>Classic:</strong> a great quality wine.
             </p>
           </fieldset>
-        </section>
-        <section className="tastings">
-          <hr />
-          <ul className="ul-tasting-list" aria-live="polite">
-            {tastings.map((tasting) => (
-              <TastingItem
-                key={tasting.id}
-                {...tasting}
-                deleteTasting={this.context.deleteTasting}
-                {...this.props}
-              />
-            ))}
-          </ul>
         </section>
       </section>
     );

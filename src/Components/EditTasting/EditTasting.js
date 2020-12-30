@@ -61,11 +61,13 @@ class EditTasting extends Component {
   };
 
   componentDidMount() {
-    const id = Number(this.props.match.params.id);
-    const tasting = this.context.tastings.find((t) => t.id === id);
-    this.setState({
-      newTasting: tasting,
-    });
+    setTimeout(() => {
+      const id = Number(this.props.match.params.id);
+      const tasting = this.context.tastings.find((t) => t.id === id);
+      this.setState({
+        newTasting: tasting,
+      });
+    }, 1000);
   }
 
   render() {
@@ -103,7 +105,7 @@ class EditTasting extends Component {
                 placeholder="eg.The Etcharts"
                 type="text"
                 id="producer"
-                value={newTasting.producer}
+                value={newTasting.producer || ""}
                 name="producer"
                 onChange={(e) => this.handleChange(e)}
               />
@@ -238,7 +240,7 @@ class EditTasting extends Component {
                 value="true"
                 name="rim"
                 type="radio"
-                checked={newTasting.rim}
+                checked={newTasting.rim === "true"}
                 onChange={(e) => this.handleChange(e)}
               />
               True
@@ -247,7 +249,7 @@ class EditTasting extends Component {
                 name="rim"
                 value="false"
                 type="radio"
-                checked={!newTasting.rim}
+                checked={newTasting.rim === "false"}
                 onChange={(e) => this.handleChange(e)}
               />
               False
@@ -289,13 +291,13 @@ class EditTasting extends Component {
                 value="true"
                 name="gas"
                 type="radio"
-                checked={newTasting.gas}
+                checked={newTasting.gas === "true"}
                 onChange={(e) => this.handleChange(e)}
               />
               True
               <input
                 id="gas"
-                checked={!newTasting.gas}
+                checked={newTasting.gas === "false"}
                 value="false"
                 name="gas"
                 type="radio"

@@ -23,7 +23,7 @@ class Dashboard extends Component {
           </p>
           <h3>Your average score</h3>
           <p>
-            <strong>{Number(avgScore)}</strong> points UP
+            <strong>{Math.round(Number(avgScore)).toFixed(2)}</strong> points UP
           </p>
           <h3>Common varietals</h3>
           <i>{uniqueVarietals.sort().join(", ")}</i>

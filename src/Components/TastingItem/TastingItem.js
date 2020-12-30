@@ -94,10 +94,8 @@ export default class TastingItem extends Component {
                 </p>
                 <p>
                   <i className="fas fa-palette"></i>
-                  {colorred || ""}
+                  {colorred || ""} {colorwhite || ""} {colorrose || ""}
                 </p>
-                <p>{colorwhite || ""}</p>
-                <p>{colorrose || ""}</p>
                 <p>
                   <i className="fas fa-wine-glass-alt"></i>
                   {rim.toString()}
@@ -128,10 +126,8 @@ export default class TastingItem extends Component {
                 </p>
                 <p>
                   <i className="fab fa-apple"></i>
-                  {fruitred || ""}
+                  {fruitred || ""} {fruitwhite || ""} {fruitrose || ""}
                 </p>
-                <p>{fruitwhite || ""}</p>
-                <p>{fruitrose || ""}</p>
               </div>
               <div className="wine-palate">
                 <h3 className="sense">Palate</h3>
@@ -140,10 +136,8 @@ export default class TastingItem extends Component {
                 </p>
                 <p>
                   <i className="fas fa-lemon" />
-                  {fruitfred || ""}
+                  {fruitfred || ""} {fruitfwhite || ""} {fruitfrose || ""}
                 </p>
-                <p>{fruitfwhite || ""}</p>
-                <p>{fruitfrose || ""}</p>
                 <p>
                   <i className="fas fa-pepper-hot" /> {nonfruit}
                 </p>
