@@ -16,17 +16,28 @@ class Dashboard extends Component {
     return (
       <section className="dashboard">
         <h2>TasteBuddy Summary</h2>
-        <div className="flex">
-          <h3>Total TasteBuddy Sheets</h3>
-          <p>
-            You've done <strong>{tastings.length}</strong> tastings
-          </p>
-          <h3>Your average score</h3>
-          <p>
-            <strong>{Math.round(Number(avgScore)).toFixed(2)}</strong> points UP
-          </p>
-          <h3>Common varietals</h3>
-          <i>{uniqueVarietals.sort().join(", ")}</i>
+        <div className="group">
+          <div className="item">
+            <img src="/Images/dash-tastings.png" alt="tasting sheets" />
+            <h3>Total TasteBuddy Sheets</h3>
+            <p>
+              You've done <strong>{tastings.length}</strong> tastings
+            </p>
+          </div>
+          <div className="item">
+            <img src="/Images/dash-score.png" alt="wine profile" />
+            <h3>Your average score</h3>
+            <p>
+              <strong>{Math.round(Number(avgScore))}</strong> points UP
+            </p>
+          </div>
+          <div className="item">
+            <img src="/Images/dash-varietal.png" alt="wine profile" />
+            <h3>Common varietals</h3>
+            <p>
+              <i>{uniqueVarietals.sort().join(", ")}</i>
+            </p>
+          </div>
         </div>
       </section>
     );

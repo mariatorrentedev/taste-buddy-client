@@ -71,8 +71,7 @@ legend,
 .tasting-list h2,
 .dashboard h2,
 .home h2,
-.landing-page h2,
-.home a {
+.landing-page h2 {
   text-shadow: -1px 0 #f8f8f8, 0 1px#c0c0c0, 2px 0#b6b5b5, 0 -1px#c9c9c9;
   color: rgb(0, 0, 0);
 }
@@ -112,7 +111,6 @@ textarea {
   text-align: center;
   font-size: 15px;
   box-shadow: 0 5px 7px black;
-  cursor: pointer;
 }
 
 input:hover,
@@ -137,10 +135,12 @@ select:hover {
 
 .conventions,
 .filters,
-.home .group {
+.home .group,
+.dashboard .group {
   display: flex;
   flex-direction: column;
 }
+
 .conv-item {
   flex: 2;
   margin: 20px;
@@ -152,7 +152,8 @@ textarea {
   cursor: auto;
 }
 
-fieldset {
+fieldset,
+.dashboard p {
   background-color: rgba(253, 250, 250, 0.61);
   border: 3px solid rgb(82, 0, 0);
   padding: 20px;
@@ -177,7 +178,8 @@ fieldset {
 
 form h3,
 .singup-form p,
-.conventions h3 {
+.conventions h3,
+.dashboard h3 {
   border-radius: 15px;
   margin-top: 10px;
   background-color: rgb(238, 217, 217);
@@ -194,18 +196,37 @@ form h3,
 form .login-form {
   padding: 50px;
 }
+/*Dashboard*/
+.group img {
+  width: 40%;
+}
+.dashboard p {
+  font-size: 18px;
+}
+.dashboard p strong {
+  font-size: 30px;
+}
+
 /*Home */
 .home section {
   min-height: 200px;
   padding: 30px;
 }
 
-.home a {
+.home h3 a {
   font-weight: bolder;
+  text-decoration: none;
+  padding: 2px;
+  border-radius: 15px;
+}
+.home a:hover {
+  background-color: black;
 }
 .home section:nth-child(even),
-footer {
+footer,
+.home h3 a {
   background-color: rgb(68, 0, 0);
+  padding: 8px;
   color: white;
 }
 footer {
@@ -215,30 +236,35 @@ footer {
   box-shadow: 5px 0px 7px 5px black;
 }
 
-.home .item {
+.home .item,
+.dashboard .item {
   flex: 1;
   margin: 25px;
-  padding: 15px;
 }
 .home img {
   width: 100%;
-  margin-top: 30px;
   border-radius: 15px;
 }
 
+.home ul {
+  list-style-type: square;
+  text-align: left;
+  border: 2px solid rgb(238, 217, 217);
+}
 /*Destopk Style*/
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 800px) {
   form {
     padding: 0 150px;
   }
   .video-form video {
-    width: 750px;
+    width: 100%;
     height: 500px;
   }
   .conventions,
   .filters,
-  .home .group {
+  .home .group,
+  .dashboard .group {
     flex-direction: row;
   }
   .home img {

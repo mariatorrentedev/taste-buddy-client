@@ -103,6 +103,7 @@ class TastingList extends Component {
           </section>
         </div>
         <section className="tastings">
+          <h2>WINE TASTING SHEETS</h2>
           <hr />
           <ul className="ul-tasting-list" aria-live="polite">
             {tastings.map((tasting) => (
