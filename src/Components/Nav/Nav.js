@@ -33,7 +33,7 @@ export default class Nav extends React.Component {
                     type="submit"
                     onClick={(e) => this.logout(e)}
                   >
-                    <img src="/images/logout.png" alt="logout-icon" />
+                    <img src="/Images/logout.png" alt="logout-icon" />
                   </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ export default class Nav extends React.Component {
                     aria-label="login-button"
                     type="submit"
                   >
-                    <img src="/images/login.png" alt="login-icon" />
+                    <img src="/Images/login.png" alt="login-icon" />
                     <p>Login</p>
                   </Link>
                 </li>
@@ -66,7 +66,7 @@ export default class Nav extends React.Component {
                     aria-label="singup-button"
                     type="submit"
                   >
-                    <img src="/images/singup.png" alt="singup-icon" />
+                    <img src="/Images/singup.png" alt="singup-icon" />
                     <p>Singup</p>
                   </Link>
                 </li>
