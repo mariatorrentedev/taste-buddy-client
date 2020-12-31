@@ -400,7 +400,19 @@ function Home() {
               <legend>
                 <i className="fas fa-tree" /> Wood
               </legend>
-              Remember
+              Used the correctly oak can increase the intensity and complexity
+              of the wine.
+              <strong>* White Wines:</strong> Oak can generate notes of
+              vainilla, butterscotch, and caramel.
+              <strong>* Red Wines: </strong> Oak adds smoke, tobacco, leather
+              and chocolate.
+              <strong>* American Oak</strong> American grows faster than French,
+              provides more flavor intensity but fewer tannins.(vanilla,
+              tropical and caramel notes).
+              <strong>* French Oak</strong> French has a tighter grain, si
+              trnasfer flavors slowly and it's more porous meaning the barrels
+              will impart more complex flavors through oxygenation.(Spices,
+              toasted nuts, coffee and leather notes.)
             </fieldset>
           </div>
           <div className="item">
@@ -408,8 +420,10 @@ function Home() {
               <legend>
                 <i className="fas fa-pen-square" /> Comments
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The final notes of the wine are the most important, it is where
+              you are going to write a small conclusion of the most relevant
+              characteristics of the wine together with an ideal pairing that
+              highlights the aromas and essence of the wine.
             </fieldset>
           </div>
           <div className="item">
@@ -417,8 +431,11 @@ function Home() {
               <legend>
                 <i className="fas fa-star" /> Score
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The 100-point wine-scoring scale was popularized by the Wine
+              Spectator magazine by Robert Parker.
+              <strong>*</strong> As subjective as the tasting experience is,
+              there is not bad analysis, but keep in mind that with all this
+              additional knowledge you can make a much more assertive rating.
             </fieldset>
           </div>
         </div>
