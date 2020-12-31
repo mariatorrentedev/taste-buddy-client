@@ -148,8 +148,7 @@ function Home() {
                 pigment as they age.
               </p>
             </fieldset>
-          </div>
-          <div className="item">
+
             <fieldset>
               <legend>
                 <i className="fas fa-wine-glass-alt" /> Rim
@@ -161,6 +160,8 @@ function Home() {
                 blue tinge of a red wine can indicates a higher acidity.
               </strong>
             </fieldset>
+          </div>
+          <div className="item">
             <fieldset>
               <legend>
                 <i className="fab fa-mixer" /> Extraction
@@ -182,6 +183,7 @@ function Home() {
               basically refering to the wine legs, and you can identify it
               visualy with the viscosity of the wine.
               <strong>
+                <strong>*</strong>
                 When the legs are more dense, it means the wine have more
                 alcohol, which will taste with a burning sensation in the back
                 throat.
@@ -214,35 +216,56 @@ function Home() {
       </section>
       <section>
         <h2>NOSE</h2>
+
+        <h3>
+          Then..spin your glass and bring it up to your nose. Is it citrus?
+          mineral? floral?
+        </h3>
+        <ol>
+          There are three aroma categories:
+          <li>Primary: derived from the grape variety and growing region.</li>
+          <li>
+            Secondary: produced by the fermentation process. *bread-like aroma
+            is a sign yeast.
+          </li>
+          <li>
+            Ternary: comes from the aging process. *Vanilla, cocoa aromas is a
+            sign aging and specific oak.
+          </li>
+        </ol>
+
         <div className="group">
           <div className="item">
             <fieldset>
               <legend>
                 <i className="fas fa-fan"></i> Condition
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The condition in nose determine if the wine is in the proper
+              state. There are some aromas that are part from the terroir and
+              can generate an intense aroma in the wine.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-signal"></i> Intensity
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The intensity sometimes is confused with the alcohol, here you
+              need to identify if the primary aromas intensity.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-clock"> </i> Age Ageassessment
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              Sometimes most of young wines have an intense aroma, after aging
+              they developed ternary aromas.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fab fa-apple"></i> Fruit Aromas
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              This is very subjective, because a lot of aromas can become from
+              an specific experience.. But A young wine presents more fruit on
+              the nose than an older bottler, which can have more earthy
+              components.
             </fieldset>
           </div>
           <div className="item">

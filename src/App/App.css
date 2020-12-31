@@ -251,6 +251,19 @@ footer {
   text-align: left;
   border: 2px solid rgb(238, 217, 217);
 }
+.home ol {
+  list-style-type: upper-roman;
+  border: 2px solid rgb(5, 5, 5);
+  font-size: 22px;
+  font-weight: bolder;
+  background-color: rgb(68, 0, 0);
+  color: white;
+}
+
+.home ol li {
+  padding: 20px;
+  font-size: 18px;
+}
 /*Destopk Style*/
 
 @media all and (min-width: 800px) {
