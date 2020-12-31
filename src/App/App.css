@@ -114,7 +114,8 @@ textarea {
 }
 
 input:hover,
-select:hover {
+select:hover,
+.landing-page a:hover {
   background-color: rgb(0, 0, 0);
   color: white;
 }
@@ -171,7 +172,8 @@ fieldset,
 }
 .varietal-filter,
 .vintage-filter,
-.score-filter {
+.score-filter,
+.landing-page section {
   flex: 1;
   margin: 20px;
 }
@@ -192,6 +194,11 @@ form h3,
   height: 350px;
   position: relative;
   color: white;
+}
+.banner2 {
+  background: url("/src/Images/wine-not.png") no-repeat center fixed;
+  background-size: cover;
+  height: 600px;
 }
 form .login-form {
   padding: 50px;
@@ -224,10 +231,16 @@ form .login-form {
 }
 .home section:nth-child(even),
 footer,
-.home h3 a {
+.home h3 a,
+.landing-page a {
   background-color: rgb(68, 0, 0);
   padding: 8px;
   color: white;
+}
+.landing-page a {
+  border-radius: 15px;
+  margin-left: 15px;
+  text-decoration: none;
 }
 footer {
   margin-top: 30px;

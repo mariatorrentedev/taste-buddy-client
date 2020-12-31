@@ -279,35 +279,44 @@ function Home() {
         <div>
           <img src="/Images/wine-palate.png" alt="wine profile" />
         </div>
+        <h3>
+          The most exciting part of the wine tasting, the palate! Now we all
+          deserve a sip. Gently swish the wine around the mounth so it coats
+          your tongue..
+        </h3>
         <div className="group">
           <div className="item">
             <fieldset>
               <legend>
                 <i className="fas fa-candy-cane" /> Sweetness
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The swetness in the palate is determine by the tip of the tongue.
+              <p>
+                <strong>*</strong> If the wine is dry, it means there is no
+                residual sugar, no sweetness.
+              </p>
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-lemon" /> Fruit Flavors
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              Fluir Flavors will depeng on the state of the fruit, is it fresh?
+              is it ripe? is it more madure?
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-pepper-hot" /> Non-Fruit
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              Non-fruit flavors will depend on the type of wine, floral notes
+              are more common on white wines, minerality and mushrooms in aged
+              wines.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-mountain" /> Earth
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              Earth notes are related with the aging of the wine and can give
+              extraordinary an sensation in the mouth.
             </fieldset>
           </div>
           <div className="item">
@@ -315,29 +324,41 @@ function Home() {
               <legend>
                 <i className="fas fa-spa" /> Mineral
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              Minerality is more common in white wines.
+              <p>
+                <strong>*</strong> The climate and the soils will influence the
+                mineral notes in the wine.
+              </p>
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-certificate" /> Tannins
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The tannins are described as the drying sensation in your mouth,
+              there are two kinds: from the wood and from the skin, seeds and
+              stems of the grape.
+              <p>
+                <strong>*</strong> Oak tannins are softer and smoother so will
+                less intensity.
+              </p>
             </fieldset>
             <fieldset>
               <legend>
                 <i className="far fa-lemon" /> Acidity
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The sides of the tongue detect the acidity and produce a watering
+              sensation.
+              <p>
+                <strong>*</strong> Acidity can reveal clues about the varietal,
+                climate and aging of the wine.
+              </p>
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-wine-bottle" /> Alcohol
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The alcohol needs to be balance, and not give you a hot sensation,
+              as part of the complexity but not the main character.
             </fieldset>
           </div>
           <div className="item">
@@ -345,29 +366,28 @@ function Home() {
               <legend>
                 <i className="fab fa-creative-commons-remix" /> Complexity
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The complexity is the summary from the intensity of the alcohol,
+              acidity, intensity and tannins.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-ruler" /> Length
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The length is determine on How long the flavors last after
+              tasting, loger time, more flavor and more complexity.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-child" /> Body
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The body will be determined by the alcohol content and teh texture
+              of the wine.
             </fieldset>
             <fieldset>
               <legend>
                 <i className="fas fa-align-center" /> Texture
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              The texture will depend on the tannins and the length.
             </fieldset>
           </div>
         </div>
@@ -380,8 +400,7 @@ function Home() {
               <legend>
                 <i className="fas fa-tree" /> Wood
               </legend>
-              The region is where the wine is produce and it varies depending on
-              the area, since each one has its regulations.
+              Remember
             </fieldset>
           </div>
           <div className="item">
