@@ -278,6 +278,23 @@ footer {
   padding: 20px;
   font-size: 18px;
 }
+.demo-account {
+  padding: 15px;
+  background-color: rgba(88, 0, 0, 0.397);
+  color: white;
+  border-radius: 15px;
+}
+.demo-account h2 {
+  color: rgb(68, 0, 0);
+}
+.demo-account h3 {
+  font-size: 15px;
+  background-color: rgb(68, 0, 0);
+  color: white;
+}
+.demo-account p {
+  font-size: 20px;
+}
 /*Destopk Style*/
 
 @media all and (min-width: 800px) {

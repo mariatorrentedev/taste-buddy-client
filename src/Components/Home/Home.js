@@ -409,8 +409,8 @@ function Home() {
               <strong>* American Oak</strong> American grows faster than French,
               provides more flavor intensity but fewer tannins.(vanilla,
               tropical and caramel notes).
-              <strong>* French Oak</strong> French has a tighter grain, si
-              trnasfer flavors slowly and it's more porous meaning the barrels
+              <strong>* French Oak</strong> French has a tighter grain, it
+              transfer flavors slowly and it's more porous meaning the barrels
               will impart more complex flavors through oxygenation.(Spices,
               toasted nuts, coffee and leather notes.)
             </fieldset>

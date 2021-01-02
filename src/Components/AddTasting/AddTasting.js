@@ -173,7 +173,6 @@ class AddTasting extends Component {
                 </label>
                 <select
                   name="colorwhite"
-                  required
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>

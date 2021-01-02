@@ -34,6 +34,13 @@ export default class Login extends React.Component {
           onSubmit={this.handleLogin}
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
+          <div className="demo-account">
+            <h2>Demo Account</h2>
+            <h3>Username</h3>
+            <p>demo@demo.com</p>
+            <h3>Password</h3>
+            <p>Demo1234!</p>
+          </div>
           <fieldset aria-label="email">
             <legend>Login</legend>
             <div className="flex-wrap">
