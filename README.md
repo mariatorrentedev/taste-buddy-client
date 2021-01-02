@@ -2,8 +2,6 @@
 
 ## [TasteBuddy App](https://taste-buddy-client.vercel.app/)
 
----
-
 ## React App to create, save, edit & delete your wine tasting sheets.
 
 ---
@@ -32,4 +30,4 @@
 
 ---
 
-## Here is the link to the [TasteBuddy API](https://github.com/cartodeveloper/taste-buddy-api)
+## Here is the link to the API repository [TasteBuddy API](https://github.com/cartodeveloper/taste-buddy-api)
