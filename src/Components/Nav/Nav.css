@@ -35,7 +35,7 @@ button {
 }
 header p {
   margin: 4px;
-  font-size: 7px;
+  font-size: 8px;
   text-shadow: -1px 0 #000000, 0 3px#000000, 2px 0#3a3737, 0 -1px#504a4a;
 }
 
@@ -62,6 +62,9 @@ button {
   }
   header nav {
     margin-top: 10px;
+  }
+  header nav ul {
+    font-size: 15px;
   }
   ul li {
     margin: 0 10px;

@@ -147,7 +147,7 @@ class AddTasting extends Component {
             </div>
             <div className="concentration">
               <label htmlFor="concentration" aria-label="concentration">
-                <h3>Concentration: *</h3> <div className="required">*</div>
+                <h3>Concentration: *</h3>
               </label>
               <select
                 name="concentration"
