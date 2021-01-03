@@ -22,6 +22,7 @@ header nav {
 header nav ul {
   display: flex;
   list-style: none;
+  font-size: 10px;
 }
 
 section h1,
@@ -29,12 +30,12 @@ header nav ul li a,
 button {
   color: white;
   text-decoration: none;
-  margin-right: 25px;
+  margin-right: 10px;
   justify-content: space-around;
 }
 header p {
   margin: 4px;
-  font-size: 10px;
+  font-size: 7px;
   text-shadow: -1px 0 #000000, 0 3px#000000, 2px 0#3a3737, 0 -1px#504a4a;
 }
 

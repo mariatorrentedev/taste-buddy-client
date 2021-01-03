@@ -226,8 +226,8 @@ class EditTasting extends Component {
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="">Select...</option>
-                  <option value="ligth-pink">Ligth Pink</option>
-                  <option value="ligth-orange">Ligth Orange</option>
+                  <option value="light-pink">Light Pink</option>
+                  <option value="light-orange">Light Orange</option>
                   <option value="tart-cherry">Tart Cherry</option>
                   <option value="dark-pink">Dark Pink</option>
                 </select>
@@ -264,7 +264,7 @@ class EditTasting extends Component {
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
-                <option value="Ligth">Ligth </option>
+                <option value="Light">Light </option>
                 <option value="Medium">Medium</option>
                 <option value="Heavy">Heavy</option>
               </select>
@@ -279,7 +279,7 @@ class EditTasting extends Component {
                 onChange={(e) => this.handleChange(e)}
               >
                 <option value="">Select...</option>
-                <option value="Ligth">Ligth </option>
+                <option value="Light">Light </option>
                 <option value="Medium">Medium</option>
                 <option value="Heavy">Heavy</option>
               </select>
@@ -401,8 +401,8 @@ class EditTasting extends Component {
                   onChange={(e) => this.handleChange(e)}
                 >
                   <option value="0">Select...</option>
-                  <option value="ligth-pink">Ligth Pink</option>
-                  <option value="ligth-orange">Ligth Orange</option>
+                  <option value="light-pink">Light Pink</option>
+                  <option value="light-orange">Light Orange</option>
                   <option value="tart-cherry">Tart Cherry</option>
                   <option value="dark-pink">Dark Pink</option>
                 </select>
@@ -563,11 +563,11 @@ class EditTasting extends Component {
               <div className="item">
                 <h3>Earth</h3>
                 <label>
-                  Florest Floor
+                  Forest Floor
                   <input
                     type="checkbox"
-                    checked={newTasting.earth === "florest floor"}
-                    value="florest floor"
+                    checked={newTasting.earth === "forest floor"}
+                    value="forest floor"
                     name="earth"
                     onChange={(e) => this.handleChange(e)}
                   />
@@ -755,7 +755,7 @@ class EditTasting extends Component {
                 value={newTasting.body || ""}
                 onChange={(e) => this.handleChange(e)}
               >
-                <option value="ligth">Ligth</option>
+                <option value="light">Light</option>
                 <option value="medium">Medium</option>
                 <option value="full">Full</option>
               </select>

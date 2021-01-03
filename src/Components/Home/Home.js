@@ -108,7 +108,7 @@ function Home() {
       </section>
       <section>
         <h2>Awaken your senses</h2>
-        <h2>SIGTH</h2>
+        <h2>SIGHT</h2>
         <div className="item">
           <img src="/Images/wine-sigth.png" alt="wine profile" />
         </div>
@@ -199,7 +199,7 @@ function Home() {
                 <strong>*</strong> An example, the <strong>Champagne</strong>{" "}
                 uses the traditional method which involves a second fermentation
                 in the bottle where sugars and yeasts are added, this method
-                produces smaller bubbles that you can identify on the sigth.
+                produces smaller bubbles that you can identify on the sight.
               </p>
               <p>
                 <strong>*</strong> But there are some other interesting signs

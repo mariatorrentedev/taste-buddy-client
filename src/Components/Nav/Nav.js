@@ -67,7 +67,7 @@ export default class Nav extends React.Component {
                     type="submit"
                   >
                     <img src="/Images/singup.png" alt="singup-icon" />
-                    <p>Singup</p>
+                    <p>Signup</p>
                   </Link>
                 </li>
               </>

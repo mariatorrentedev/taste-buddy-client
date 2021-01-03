@@ -36,7 +36,7 @@ export default class Signup extends React.Component {
         >
           {this.state.error && <p className="error">{this.state.error}</p>}
           <fieldset>
-            <legend>Singup</legend>
+            <legend>Signup</legend>
             <p>Start your TasteBuddy journey today!</p>
             <div className="flex-wrap">
               <label htmlFor="new-email">Email</label>
