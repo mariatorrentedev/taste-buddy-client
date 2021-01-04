@@ -454,7 +454,7 @@ class AddTasting extends Component {
                 </label>
               </div>
               <div className="item">
-                <h3>Non-fruit</h3>
+                <h3>Non-fruit *</h3>
                 <label>
                   Floral
                   <input
@@ -507,7 +507,7 @@ class AddTasting extends Component {
                 </label>
               </div>
               <div className="item">
-                <h3>Earth</h3>
+                <h3>Earth *</h3>
                 <label>
                   Forest Floor
                   <input
@@ -550,7 +550,7 @@ class AddTasting extends Component {
                 </label>
               </div>
               <div className="item">
-                <h3>Mineral</h3>
+                <h3>Mineral *</h3>
                 <label>
                   Mineral
                   <input
