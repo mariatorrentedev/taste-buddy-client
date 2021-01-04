@@ -137,7 +137,7 @@ class TastingList extends Component {
             <p>
               <i className="fas fa-globe-americas" /> Region
             </p>
-            <h3>SIGTH</h3>
+            <h3>SIGHT</h3>
             <p>
               <i className="fas fa-fan" /> Condition
             </p>
