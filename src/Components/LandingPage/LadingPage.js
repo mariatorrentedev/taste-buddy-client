@@ -21,7 +21,7 @@ function LandingPage() {
       </section>
       <div className="banner"></div>
       <section>
-        <h2>Enhace your tasting skills!</h2>
+        <h2>Enhance your tasting skills!</h2>
         <p>
           Fill out your own deductive tasting format similar to the one that the
           Court of Master Sommeliers use in their studies.
