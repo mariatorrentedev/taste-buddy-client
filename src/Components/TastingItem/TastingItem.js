@@ -83,7 +83,7 @@ export default class TastingItem extends Component {
                 </p>
               </div>
               <div className="wine-sigth">
-                <h3 className="sense">Sigth</h3>
+                <h3 className="sense">Sight</h3>
                 <p>
                   <i className="fas fa-fan"></i>
                   {condition}
