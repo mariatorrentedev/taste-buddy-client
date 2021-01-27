@@ -1,8 +1,6 @@
-# Taste Buddy Client
+# Taste Buddy
 
-## [TasteBuddy App](https://taste-buddy-client.vercel.app/)
-
-## React App to create, save, edit & delete your wine tasting sheets.
+## Full Stack PERN Application to create, save, edit and delete wine tasting sheets.
 
 ---
 
@@ -30,4 +28,39 @@
 
 ---
 
-## Here is the link to the API repository [TasteBuddy API](https://github.com/cartodeveloper/taste-buddy-api)
+## 🔗[Live Link](https://taste-buddy-client.vercel.app/)
+
+## 🔗[API Repo](https://github.com/cartodeveloper/taste-buddy-api)
+
+---
+
+## 💻 Tech Stack
+
+- ### Front-End :
+  - React
+  - React Router
+  - CSS
+  - Jsx
+- ### Back-end:
+  - Node.
+  - Express.
+  - JWT.
+  - Mocha&Chai.
+  - Nodemon.
+  - Supertest.
+- ### Data Persistence:
+  - PostgreSQL.
+- ### Hosting:
+  - Vercel.
+
+### 📑API Documentation
+
+| Method |       Path        |                           Purpose |
+| :----- | :---------------: | --------------------------------: |
+| GET    |    /api/users     |                      Get the user |
+| POST   |    /api/users     |                 Register the user |
+| POST   |  /api/auth/login  |     Validates username & password |
+| GET    |   /api/tastings   |   Get all tastings from the user. |
+| POST   |   /api/tastings   | Create a tasting in user session. |
+| PUT    | /api/tastings/:id |                     Edit tasting. |
+| DELETE | /api/tastings/:id |                   Delete tasting. |
